@@ -43,18 +43,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <a href="http://localhost:8888">
-          <button>Login with Spotify</button>
-        </a>
-        <div> Now Playing: {this.state.nowPlaying.name} </div>
-        <div>
-          <img
-            src={this.state.nowPlaying.image}
-            alt="Now Playing"
-            style={{ widith: 100 }}
-          />
+        <div className="links">
+          <h3>Welcome To MusicalDash</h3>
+          <a href="http://localhost:8888">
+            <button className="login">Login with Spotify</button>
+          </a>
+          <input id="musicSearch" placeholder="add your favorite songs" />
         </div>
-        <button onClick={() => this.getNowPlaying()}>Check Now Playing</button>
+        <div className="currentSong">
+          <div> <h3>Now Playing: {this.state.nowPlaying.name} </h3> </div>
+          <div>
+            <img
+              className="songImg"
+              src={this.state.nowPlaying.image}
+              alt="Now Playing"
+            />
+          </div>
+          <button className="checkSongBtn" onClick={() => this.getNowPlaying()}>
+            Check Now Playing
+          </button>
+        </div>
       </div>
     );
   }
