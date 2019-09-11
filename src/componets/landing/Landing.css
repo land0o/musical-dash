@@ -1,0 +1,53 @@
+/* =================================
+  Base Styles
+==================================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url(./img/audio-mixer.jpg) no-repeat 50% 50%;
+  display: table;
+  top: 0;
+  background-size: cover;
+}
+.inner {
+  border: 5px solid darkorange;
+  border-radius: 5%;
+  padding: 15px 15px 15px 15px;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 50%;
+  font-size: 4em;
+  background-color: darkslategray;
+  font-family: "Times New Roman", Times, serif;
+  color: peru;
+  text-align: center;
+  opacity: 0.9;
+}
+.inner h1{
+    font-size: 45%
+}
+.inner h4{
+    font-size: 30%
+}
+
+.landingBtns {
+  width: 20%;
+  display: flex;
+  margin: auto;
+  margin-top: 20%;
+}
+.buttons {
+  border: 5px solid darkorange;
+  padding: 5px 5px 5px 5px;
+  /* width: 25%; */
+}
+.buttons:hover {
+  border: 4px solid slategrey;
+  border-radius: 35%;
+  padding: 10px 10px 10px 10px;
+  background-color: orangered;
+}

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
 
 const spotifyWebApi = new Spotify();
 
-class App extends Component {
+class CurrentTrack extends Component {
   constructor() {
     super();
     const params = this.getHashParams();
@@ -51,7 +51,10 @@ class App extends Component {
           <input id="musicSearch" placeholder="add your favorite songs" />
         </div>
         <div className="currentSong">
-          <div> <h3>Now Playing: {this.state.nowPlaying.name} </h3> </div>
+          <div>
+            {" "}
+            <h3>Now Playing: {this.state.nowPlaying.name} </h3>{" "}
+          </div>
           <div>
             <img
               className="songImg"
@@ -68,4 +71,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default CurrentTrack;
