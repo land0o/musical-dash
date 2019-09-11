@@ -1,16 +1,23 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
-import MusicalDash from "./MusicalDash";
-
+import CurrentTrack from "./trackInfo/CurrentTrack";
+import Landing from "./landing/Landing";
 export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
         <Route
           exact
-          path="/MusicalDash"
+          path="/"
           render={props => {
-            return <MusicalDash {...props} />;
+            return <Landing {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/trackInfo"
+          render={props => {
+            return <CurrentTrack {...props} />;
           }}
         />
       </React.Fragment>

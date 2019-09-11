@@ -20,7 +20,7 @@ class LandingPage extends Component {
           <section className="buttons">
             <Button
               color="success"
-              onClick={() => this.nextPath("./componets/MusicalDash")}
+              onClick={() => this.nextPath("./trackInfo")}
             >
               Build A Playlist
             </Button>
