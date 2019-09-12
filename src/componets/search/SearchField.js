@@ -52,18 +52,17 @@ class SearchField extends Component {
   render() {
     return (
       <div className="searchCard">
-        <Card>
+        <Card className="songCard">
           <CardTitle className="searchHeader">Search Music</CardTitle>
           <InputGroup>
             <Input
+            className="searchInput"
               id="songSearch"
               onChange={this.handleSubmit}
               placeholder="Search for Music"
               value={this.state.songSearch}
             />
-            <InputGroupAddon addonType="append">
-              <Button onClick={this.songSearch}>Search</Button>
-            </InputGroupAddon>
+            <Button onClick={this.songSearch}>Search</Button>
           </InputGroup>
           <CardBody>
             <CardSubtitle className="searchHeader">Search Results</CardSubtitle>
