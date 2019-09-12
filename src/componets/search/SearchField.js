@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Searchfield.css";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
+import { InputGroup, Button, Input } from "reactstrap";
 import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
 
@@ -22,16 +22,6 @@ class SearchField extends Component {
     this.setState({ activeItem: "" });
     console.log(this.state.activeItem);
   };
-
-  // handleSearchEvent = evt => {
-  //   evt.preventDefault();
-  // };
-
-  // searchInput = evt => {
-  //   this.setState({
-  //     songSearch: evt.target.value
-  //   });
-  // };
 
   songSearch = evt => {
     evt.preventDefault();
@@ -56,17 +46,19 @@ class SearchField extends Component {
           <CardTitle className="searchHeader">Search Music</CardTitle>
           <InputGroup>
             <Input
-            className="searchInput"
+              className="searchInput"
               id="songSearch"
               onChange={this.handleSubmit}
               placeholder="Search for Music"
               value={this.state.songSearch}
             />
-            <Button onClick={this.songSearch}>Search</Button>
+            <Button size="sm" onClick={this.songSearch}>
+              Search
+            </Button>
           </InputGroup>
           <CardBody>
             <CardSubtitle className="searchHeader">Search Results</CardSubtitle>
-            <CardText>
+            <CardText className="cardText">
               {this.state.tracks.map((track, index) => (
                 <SongCard {...this.props} track={track} key={index} />
               ))}

@@ -12,3 +12,9 @@
 .searchInput {
   width: auto;
 }
+.cardText {
+  overflow-y: scroll;
+  height: 200px;
+  color: #61dafb;
+  font-weight: bold;
+}
