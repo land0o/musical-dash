@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
+import SearchField from "../search/SearchField";
 
 const spotifyWebApi = new Spotify();
 
@@ -48,7 +49,6 @@ class CurrentTrack extends Component {
           <a href="http://localhost:8888">
             <button className="login">Login with Spotify</button>
           </a>
-          <input id="musicSearch" placeholder="add your favorite songs" />
         </div>
         <div className="currentSong">
           <div>
@@ -65,6 +65,9 @@ class CurrentTrack extends Component {
           <button className="checkSongBtn" onClick={() => this.getNowPlaying()}>
             Check Now Playing
           </button>
+        </div>
+        <div>
+          <SearchField {...this.props} />
         </div>
       </div>
     );
