@@ -1,0 +1,23 @@
+.searchCard {
+  border: 2px solid goldenrod;
+  width: 45%;
+  margin: 5px 5px 5px 5px;
+  background-color: #282c34;
+}
+.searchHeader {
+  color: #61dafb;
+  font-size: calc(10px + 2vmin);
+  font-weight: bolder;
+}
+.searchInput {
+  width: 40%;
+}
+.cardText {
+  overflow-y: scroll;
+  height: 200px;
+  color: #61dafb;
+  font-weight: bold;
+}
+.songCard {
+  padding: 30px;
+}
