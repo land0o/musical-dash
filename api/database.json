@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "12177171325",
+      "email": "crutchc@yahoo.com",
+      "spotifyId": "",
+      "userImage": ""
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "spotifyId": "",
+      "title": "The Juice",
+      "description": "test"
+    }
+  ],
+  "songsAddToPlaylist": [
+    {
+      "id": 1,
+      "spotifyId": "",
+      "playlistId": 1,
+      "song_uri": "spotify:track:2FKbisOVZcinq7VtYUFD4H",
+      "song_id": "2FKbisOVZcinq7VtYUFD4H"
+    }
+  ],
+  "sessionPlaylist": [
+    {
+      "id": 1,
+      "userId": 1,
+      "playlistId": 1
+    }
+  ]
+}
