@@ -42,6 +42,9 @@ div button:hover {
   color: #61dafb;
   background: violet;
 }
+.checkSongBtn {
+  margin-bottom: 10px;
+}
 .checkSongBtn:hover {
   cursor: pointer;
   color: #61dafb;

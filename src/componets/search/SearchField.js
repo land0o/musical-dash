@@ -10,7 +10,6 @@ const spotifyWebApi = new Spotify();
 class SearchField extends Component {
   state = {
     tracks: [],
-    activeItem: "Songs",
     songSearch: ""
   };
   handleSubmit = evt => {
@@ -19,8 +18,6 @@ class SearchField extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
     console.log(stateToChange);
-    this.setState({ activeItem: "" });
-    console.log(this.state.activeItem);
   };
 
   songSearch = evt => {
