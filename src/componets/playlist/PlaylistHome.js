@@ -1,19 +1,27 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import { InputGroup, Button, Input } from "reactstrap";
 import "./Playlist.css";
 
 class PlaylistHome extends Component {
   render() {
     return (
       <div className="playlistContainer">
-        <Card>
+        <Card className="playlistCard">
           <CardBody>
             <CardTitle>PlayList</CardTitle>
-            <CardSubtitle>Add Name</CardSubtitle>
+            <hr />
+            <CardSubtitle>
+              <InputGroup>
+                <Input className="searchInput" placeholder="Playlist Name" />
+                <Button size="sm">Add</Button>
+              </InputGroup>
+            </CardSubtitle>
+            <CardSubtitle>Playlist Name: The Juice</CardSubtitle>
           </CardBody>
           <CardText>Will Add the play and pause here</CardText>
-          <CardBody>
+          <CardBody className="playlistTable">
             <Table dark>
               <thead>
                 <tr>
