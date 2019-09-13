@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import {
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle
-} from "reactstrap";
+import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import "./Playlist.css";
 
 class PlaylistHome extends Component {
   render() {
     return (
-      <div>
+      <div className="playlistContainer">
         <Card>
           <CardBody>
             <CardTitle>PlayList</CardTitle>
