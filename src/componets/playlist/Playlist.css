@@ -15,8 +15,9 @@
 .playlistTable {
   width: auto;
   overflow-y: scroll;
-  height: 350px;
-  color: #61dafb;
+  height: 250px;
+  font-size: medium;
+  font-style: oblique;
 }
 .playlistBtn{
   margin: auto;
@@ -24,4 +25,5 @@
 }
 .playlistSelector{
   color: #61dafb;
+  height: 50px;
 }

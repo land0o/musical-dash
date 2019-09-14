@@ -49,7 +49,7 @@ class PlaylistHome extends Component {
               </Form>
             </CardSubtitle>
             <CardSubtitle>Playlist Name: Code Juice</CardSubtitle>
-            <CardSubtitle>Playlist Description: Code N Jam</CardSubtitle>
+            <CardSubtitle>To Code N Jam</CardSubtitle>
           </CardBody>
           <CardText>
             <ButtonGroup>
