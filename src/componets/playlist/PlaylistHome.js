@@ -1,16 +1,28 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import { Button, Form, FormGroup, Input } from "reactstrap";
+import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
 
+//1. what functions are needed to create playlist?
+//2.finish up functionality to get functioning playlist
+//3. refer to the create playlist documention
+//4. will need a button to save playlist to database and to users spotify
+//5. a end playlist btn?
+
 class PlaylistHome extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { cSelected: [] };
+
+    this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
+  }
+
+  onRadioBtnClick(rSelected) {
+    this.setState({ rSelected });
+  }
   render() {
-    //1. what functions are needed to create playlist?
-    //2.finish up functionality to get functioning playlist
-    //3. refer to the create playlist documention
-    //4. will need a button to save playlist to database and to users spotify
-    //5. a end playlist btn?
     return (
       <div className="playlistContainer">
         <Card className="playlistCard">
@@ -39,7 +51,32 @@ class PlaylistHome extends Component {
             <CardSubtitle>Playlist Name: Code Juice</CardSubtitle>
             <CardSubtitle>Playlist Description: Code N Jam</CardSubtitle>
           </CardBody>
-          <CardText>Will Add the play and pause here</CardText>
+          <CardText>
+            <ButtonGroup>
+              <Button
+              outline color="info"s
+                onClick={() => this.onRadioBtnClick(1)}
+                active={this.state.rSelected === 1}
+              >
+                back
+              </Button>
+              <Button
+                outline color="info"
+                onClick={() => this.onRadioBtnClick(2)}
+                active={this.state.rSelected === 2}
+              >
+                play/pause
+              </Button>
+              <Button
+                outline color="info"
+                onClick={() => this.onRadioBtnClick(3)}
+                active={this.state.rSelected === 3}
+              >
+                skip
+              </Button>
+            </ButtonGroup>
+            <p>Selected: {this.state.rSelected}</p>
+          </CardText>
           <CardBody className="playlistTable">
             <Table dark>
               <thead>
@@ -62,12 +99,6 @@ class PlaylistHome extends Component {
                   <td>Scenes from an Italian Restaurant</td>
                   <td>Billy Joel</td>
                   <td>The Stranger</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Exactly</td>
-                  <td>EarthGang</td>
-                  <td>Shalow Graves For Toys</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
