@@ -1,0 +1,21 @@
+.playlistContainer {
+  border: 2px solid goldenrod;
+  width: 600px;
+  background-color: #282c34;
+}
+.playlistCard {
+  color: #61dafb;
+  font-size: calc(10px + 2vmin);
+  font-weight: bolder;
+  padding: auto;
+  width: auto;
+}
+.playlistTable {
+  width: auto;
+  overflow-y: scroll;
+  height: 350px;
+}
+.playlistBtn{
+  margin: auto;
+  margin-top: 5px;
+}

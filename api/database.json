@@ -12,11 +12,11 @@
     {
       "id": 1,
       "spotifyId": "",
-      "title": "The Juice",
-      "description": "test"
+      "title": "Code Juice",
+      "description": "Code N Jam"
     }
   ],
-  "songsAddToPlaylist": [
+  "songsAddedToPlaylist": [
     {
       "id": 1,
       "spotifyId": "",

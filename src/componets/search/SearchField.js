@@ -10,7 +10,6 @@ const spotifyWebApi = new Spotify();
 class SearchField extends Component {
   state = {
     tracks: [],
-    activeItem: "Songs",
     songSearch: ""
   };
   handleSubmit = evt => {
@@ -19,8 +18,6 @@ class SearchField extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
     console.log(stateToChange);
-    this.setState({ activeItem: "" });
-    console.log(this.state.activeItem);
   };
 
   songSearch = evt => {
@@ -38,6 +35,11 @@ class SearchField extends Component {
       console.log(this.state.tracks);
     });
   };
+  //1. allow search for tracks to be added to playlist
+  //2. send a confirmation alert to add song
+  //2. collect song id and song uri add to queued array for playlist and database with a post fetch
+  //3. display songs that were added to playlist to the table and display track, artist, album
+
 
   render() {
     return (

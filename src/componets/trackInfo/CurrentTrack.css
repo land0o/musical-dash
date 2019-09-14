@@ -23,10 +23,13 @@
   border: 3px solid goldenrod;
   width: 50%;
   height: 50%;
-  float: right;
-  margin-top: 0px;
+  margin-top: 10px;
   background-color: #282c34;
   color: #61dafb;
+}
+.App{
+  display: flexbox;
+  flex-wrap: wrap;
 }
 .songImg {
   width: 65%;
@@ -41,6 +44,9 @@ div button:hover {
   cursor: pointer;
   color: #61dafb;
   background: violet;
+}
+.checkSongBtn {
+  margin-bottom: 10px;
 }
 .checkSongBtn:hover {
   cursor: pointer;
