@@ -21,8 +21,31 @@
       "id": 1,
       "spotifyId": "",
       "playlistId": 1,
-      "song_uri": "spotify:track:2FKbisOVZcinq7VtYUFD4H",
-      "song_id": "2FKbisOVZcinq7VtYUFD4H"
+      "songName": "Millionaire",
+      "albumName": "The Stranger",
+      "artistName": "Chris Stapleton",
+      "song_uri": "spotify:track:2rhFaau65TFMv4mACtE9it",
+      "song_id": "2rhFaau65TFMv4mACtE9it"
+    },
+    {
+      "spotifyId": "",
+      "playlistId": 1,
+      "songName": "Scenes from an Italian Restaurant",
+      "albumName": "The Stranger",
+      "artistName": "Billy Joel",
+      "song_uri": "spotify:track:3utq2FgD1pkmIoaWfjXWAU",
+      "song_id": "3utq2FgD1pkmIoaWfjXWAU",
+      "id": 2
+    },
+    {
+      "spotifyId": "",
+      "playlistId": 1,
+      "songName": "Exactly",
+      "albumName": "Shalow Graves For Toys",
+      "artistName": "EarthGang",
+      "song_uri": "spotify:track:0SzSJWuWeYnDBIPYuNCJ28",
+      "song_id": "0SzSJWuWeYnDBIPYuNCJ28",
+      "id": 3
     }
   ],
   "sessionPlaylist": [

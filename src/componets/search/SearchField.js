@@ -35,6 +35,9 @@ class SearchField extends Component {
       console.log(this.state.tracks);
     });
   };
+  //1. allow search for track to add to playlist
+  //2. collect song id and song uri add to queued array for playlist and database with a post fetch
+  //3. display songs that were added to playlist to the table and display track, artist, album
 
   render() {
     return (

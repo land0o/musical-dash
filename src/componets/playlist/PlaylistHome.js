@@ -26,29 +26,29 @@ class PlaylistHome extends Component {
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Title</th>
+                  <th>Artist</th>
+                  <th>Album</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>Millionaire</td>
+                  <td>Chris Stapleton</td>
+                  <td>From A Room Volume 2</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <td>Scenes from an Italian Restaurant</td>
+                  <td>Billy Joel</td>
+                  <td>The Stranger</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
+                  <td>Exactly</td>
+                  <td>EarthGang</td>
+                  <td>Shalow Graves For Toys</td>
                 </tr>
               </tbody>
             </Table>
