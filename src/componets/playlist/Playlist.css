@@ -12,4 +12,10 @@
 }
 .playlistTable {
   width: auto;
+  overflow-y: scroll;
+  height: 300px;
+}
+.playlistBtn{
+  margin: auto;
+  margin-top: 5px;
 }
