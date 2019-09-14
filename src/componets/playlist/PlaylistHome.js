@@ -78,7 +78,7 @@ class PlaylistHome extends Component {
             <p>Selected: {this.state.rSelected}</p>
           </CardText>
           <CardBody className="playlistTable">
-            <Table dark>
+            <Table dark className="playlistSelector">
               <thead>
                 <tr>
                   <th>#</th>

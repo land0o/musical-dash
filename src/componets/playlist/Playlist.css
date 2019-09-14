@@ -9,13 +9,19 @@
   font-weight: bolder;
   padding: auto;
   width: auto;
+  background: url(./img/cellular.jpg) no-repeat 50% 50%;
+  background-size: cover;
 }
 .playlistTable {
   width: auto;
   overflow-y: scroll;
   height: 350px;
+  color: #61dafb;
 }
 .playlistBtn{
   margin: auto;
   margin-top: 5px;
+}
+.playlistSelector{
+  color: #61dafb;
 }
