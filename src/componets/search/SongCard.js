@@ -15,6 +15,7 @@ export class SongCard extends Component {
             </Button>
           </p>
         </div>
+        <hr className="hrLine"/>
       </div>
     );
   }
