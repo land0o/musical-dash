@@ -12,6 +12,7 @@ body {
   display: table;
   top: 0;
   background-size: cover;
+  z-index: -1;
 }
 .inner {
   border: 5px solid darkorange;

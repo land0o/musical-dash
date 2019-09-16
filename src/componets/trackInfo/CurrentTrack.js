@@ -42,7 +42,14 @@ class CurrentTrack extends Component {
       });
     });
   }
+  getloggedInUser() {
+    spotifyWebApi.getMe().then(response => {
+      console.log("spotify response", response);
+      localStorage.setItem("spotifyId", response.id );
+    });
+  }
   render() {
+    this.getloggedInUser();
     return (
       <div className="App">
         <div className="links">
