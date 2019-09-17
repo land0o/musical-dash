@@ -11,15 +11,15 @@
   "playlists": [
     {
       "id": 1,
-      "spotifyId": "",
-      "title": "Code Juice",
-      "description": "Code N Jam"
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
+      "title": "AppTest",
+      "description": "O Shit it works"
     }
   ],
   "songsAddedToPlaylist": [
     {
       "id": 1,
-      "spotifyId": "",
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
       "playlistId": 1,
       "songName": "Millionaire",
       "albumName": "The Stranger",
@@ -28,7 +28,7 @@
       "song_id": "2rhFaau65TFMv4mACtE9it"
     },
     {
-      "spotifyId": "",
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
       "playlistId": 1,
       "songName": "Scenes from an Italian Restaurant",
       "albumName": "The Stranger",
@@ -38,7 +38,7 @@
       "id": 2
     },
     {
-      "spotifyId": "",
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
       "playlistId": 1,
       "songName": "Exactly",
       "albumName": "Shalow Graves For Toys",

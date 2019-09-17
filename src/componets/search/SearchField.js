@@ -6,10 +6,12 @@ import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
 
 const spotifyWebApi = new Spotify();
+const playlistId = localStorage.getItem("playlistId");
 
 class SearchField extends Component {
   state = {
     tracks: [],
+    PlaylistId: localStorage.getItem("playlistId"),
     songSearch: ""
   };
   handleSubmit = evt => {
@@ -35,6 +37,14 @@ class SearchField extends Component {
       console.log(this.state.tracks);
     });
   };
+
+  addSongs = () => {
+    spotifyWebApi.addTracksToPlaylist(playlistId, {}).then(data => {});
+  };
+  addSongsToPlaylist = evt => {
+    evt.preventDefault();
+  };
+  //use map to iterate over the search results to elect one song and get the info needed(id,songURi, name and artist)
   //1. allow search for tracks to be added to playlist
   //2. send a confirmation alert to add song
   //2. collect song id and song uri add to queued array for playlist and database with a post fetch

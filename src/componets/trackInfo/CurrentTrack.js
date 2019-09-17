@@ -48,7 +48,7 @@ class CurrentTrack extends Component {
     spotifyWebApi.getMe().then(response => {
       console.log("spotify response", response);
       localStorage.setItem("spotifyId", response.id);
-      localStorage.setItem("SpotifyName", response.email)
+      localStorage.setItem("SpotifyEmail", response.email)
     });
   }
   postUser(UserObject) {

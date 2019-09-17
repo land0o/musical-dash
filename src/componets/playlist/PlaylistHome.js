@@ -22,8 +22,8 @@ class PlaylistHome extends Component {
       userId: localStorage.getItem("spotifyId"),
       playlistName: "",
       playlistDesc: "",
-      createPlaylist: []
-
+      currentPlaylistId: localStorage.getItem("playlistId"),
+      newPlaylist: []
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
   }
@@ -35,17 +35,31 @@ class PlaylistHome extends Component {
     console.log(stateToChange);
   };
 
-  //do i need to pass in an object?
   getNewPlaylist() {
-    spotifyWebApi.createPlaylist(userId, {name: this.state.playlistName, description: this.state.playlistDesc})
-      .then(response => {
-        console.log("newPlaylist response", response);
+    spotifyWebApi
+      .createPlaylist(userId, {
+        name: this.state.playlistName,
+        description: this.state.playlistDesc
       })
+      .then(playlistResponse => {
+        console.log("newPlaylist response", playlistResponse);
+        localStorage.setItem("currentPlaylistId", playlistResponse.id);
+      });
+    alert(`Playlist ${this.state.playlistName} has been created!`);
   }
+  // will need to make a section that holds a users playlist, and then allow them to update pre-made playlist that were made with this app
+  //need to add the login to the landing page remove it from the dashboard
+  //need to import the nav and sidebar
+  //on the navbar the logo to the left and logout(clear localstoarge and reroute to homepage)
+  //need to put the cards into the correct layout
+  //will need to create a section that shows user's playlist and allow them to be crud'd
+  // list of user playlist with songs
+  //edit playlist
+  //login then show dash
 
   addPlaylistInfo = evt => {
     evt.preventDefault();
-    this.getNewPlaylist()
+    this.getNewPlaylist();
     console.log(this.state.PlaylistName);
     console.log(userId);
   };
@@ -91,7 +105,9 @@ class PlaylistHome extends Component {
                 </Button>
               </Form>
             </CardSubtitle>
-            <CardSubtitle>Playlist Name: {this.state.playlistName}</CardSubtitle>
+            <CardSubtitle>
+              Playlist Name: {this.state.playlistName}
+            </CardSubtitle>
             <CardSubtitle>{this.state.playlistDesc}</CardSubtitle>
           </CardBody>
           <CardText>
