@@ -37,10 +37,10 @@ class PlaylistHome extends Component {
 
   //do i need to pass in an object?
   getNewPlaylist() {
-    spotifyWebApi.createPlaylist(userId, {name: this.state.playlistName})
+    spotifyWebApi.createPlaylist(userId, {name: this.state.playlistName, description: this.state.playlistDesc})
       .then(response => {
         console.log("newPlaylist response", response);
-      });
+      })
   }
 
   addPlaylistInfo = evt => {
