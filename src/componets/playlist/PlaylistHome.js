@@ -91,8 +91,8 @@ class PlaylistHome extends Component {
                 </Button>
               </Form>
             </CardSubtitle>
-            <CardSubtitle>Playlist Name: Code Juice</CardSubtitle>
-            <CardSubtitle>To Code N Jam</CardSubtitle>
+            <CardSubtitle>Playlist Name: {this.state.playlistName}</CardSubtitle>
+            <CardSubtitle>{this.state.playlistDesc}</CardSubtitle>
           </CardBody>
           <CardText>
             <ButtonGroup>
