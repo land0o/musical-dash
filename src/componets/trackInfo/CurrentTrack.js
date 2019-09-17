@@ -5,6 +5,7 @@ import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
 
 const spotifyWebApi = new Spotify();
+const remoteURL = "http://localhost:5002";
 
 class CurrentTrack extends Component {
   constructor() {
@@ -42,12 +43,24 @@ class CurrentTrack extends Component {
       });
     });
   }
+  //NEED TO COLLECT USER INFO AND SAVE TO DATABASE ONE TIME SHOULD BE A CONDITIONAL
   getloggedInUser() {
     spotifyWebApi.getMe().then(response => {
       console.log("spotify response", response);
-      localStorage.setItem("spotifyId", response.id );
+      localStorage.setItem("spotifyId", response.id);
+      localStorage.setItem("SpotifyName", response.email)
     });
   }
+  postUser(UserObject) {
+    return fetch(`${remoteURL}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(UserObject)
+    }).then(response => response.json());
+  }
+
   render() {
     this.getloggedInUser();
     return (

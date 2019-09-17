@@ -6,6 +6,7 @@ import "./Playlist.css";
 import Spotify from "spotify-web-api-js";
 
 const spotifyWebApi = new Spotify();
+const userId = localStorage.getItem("spotifyId");
 
 //1. what functions are needed to create playlist? need userid(is in local storage), name and desc req
 //2.finish up functionality to get functioning playlist
@@ -18,9 +19,11 @@ class PlaylistHome extends Component {
     super(props);
     this.state = {
       cSelected: [],
-      userId: parseInt(localStorage.getItem("spotifyId")),
+      userId: localStorage.getItem("spotifyId"),
       playlistName: "",
-      playlistDesc: ""
+      playlistDesc: "",
+      createPlaylist: []
+
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
   }
@@ -31,20 +34,20 @@ class PlaylistHome extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
+
+  //do i need to pass in an object?
   getNewPlaylist() {
-    const spotifyId = this.state.userId;
-    spotifyWebApi
-      .createPlaylist(spotifyId, {
-        name: this.props.addPlaylistInfo.playlistName
-      })
+    spotifyWebApi.createPlaylist(userId, {name: this.state.playlistName})
       .then(response => {
         console.log("newPlaylist response", response);
       });
   }
+
   addPlaylistInfo = evt => {
     evt.preventDefault();
-    this.getNewPlaylist(this.state.createPlaylist);
-    console.log(this.state.addPlaylistName);
+    this.getNewPlaylist()
+    console.log(this.state.PlaylistName);
+    console.log(userId);
   };
 
   onRadioBtnClick(rSelected) {
@@ -80,7 +83,7 @@ class PlaylistHome extends Component {
                 </FormGroup>
                 <Button
                   className="playlistBtn"
-                  onClick={this.getNewPlaylist}
+                  onClick={this.addPlaylistInfo}
                   outline
                   color="info"
                 >
