@@ -3,9 +3,9 @@ import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
+import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
-const remoteURL = "http://localhost:5002";
 
 class CurrentTrack extends Component {
   constructor() {
@@ -13,6 +13,11 @@ class CurrentTrack extends Component {
     const params = this.getHashParams();
     this.state = {
       loggedIn: params.access_token ? true : false,
+      users: [],
+      email: "",
+      userName: "",
+      spotifyId: "",
+      userImage: "",
       nowPlaying: {
         name: "Not Checked",
         image: ""
@@ -43,23 +48,37 @@ class CurrentTrack extends Component {
       });
     });
   }
+  componentDidMount() {
+    // getAll users from database
+    DataManager.getAllUsers().then(users => {
+      this.setState({
+        users: users
+      });
+    });
+  }
+
   //NEED TO COLLECT USER INFO AND SAVE TO DATABASE ONE TIME SHOULD BE A CONDITIONAL
   getloggedInUser() {
     spotifyWebApi.getMe().then(response => {
+      const newUser = {
+        email: response.email,
+        userName: response.display_name,
+        spotifyId: response.id,
+        userImage: response.images[0].url
+      };
       console.log("spotify response", response);
+      console.log(newUser);
       localStorage.setItem("spotifyId", response.id);
-      localStorage.setItem("SpotifyEmail", response.email)
-    });
+      localStorage.setItem("SpotifyEmail", response.email);
+    })
   }
-  postUser(UserObject) {
-    return fetch(`${remoteURL}/users`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(UserObject)
-    }).then(response => response.json());
-  }
+  //why is it not working?
+  // .then(
+  //   if (this.response.newUser.find(users => users.userName === this.response.userName)) {
+  //    return console.log("user already in database");
+  //  } else {
+  //    DataManager.postUser(this.newUser)
+  //  })
 
   render() {
     this.getloggedInUser();

@@ -40,18 +40,23 @@ class SearchField extends Component {
       })
       .then(() => {
         this.state.tracks.map(track => {
-          console.log(track)
-          return {
-          songName: track.name,
-          albumName: track.album.name,
-          artistName: track.artists.name,
-          song_uri: track.id,
-         song_id: track.uri
-        }
+          console.log(track);
+          const songInfo = {
+            songName: track.name,
+            albumName: track.album.name,
+            artistName: track.artists.name,
+            song_uri: track.id,
+            song_id: track.uri
+          };
+          return console.log(songInfo);
         });
       });
   };
 
+//how do i pass mapped tracks to the btn on the indvidual song?
+//once im able to select a song i need to pass songuri and song id to the current playlist
+
+//to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongs = () => {
     spotifyWebApi.addTracksToPlaylist(playlistId, {}).then(data => {});
   };
