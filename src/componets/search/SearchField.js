@@ -29,13 +29,27 @@ class SearchField extends Component {
   };
 
   searchTracks = songSearch => {
-    spotifyWebApi.searchTracks(songSearch).then(data => {
-      this.setState({
-        tracks: data.tracks.items,
-        songSearch: ""
+    spotifyWebApi
+      .searchTracks(songSearch)
+      .then(data => {
+        this.setState({
+          tracks: data.tracks.items,
+          songSearch: ""
+        });
+        console.log(this.state.tracks);
+      })
+      .then(() => {
+        this.state.tracks.map(track => {
+          console.log(track)
+          return {
+          songName: track.name,
+          albumName: track.album.name,
+          artistName: track.artists.name,
+          song_uri: track.id,
+         song_id: track.uri
+        }
+        });
       });
-      console.log(this.state.tracks);
-    });
   };
 
   addSongs = () => {
