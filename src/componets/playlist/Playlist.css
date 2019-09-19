@@ -30,3 +30,6 @@
 .editPlaylist{
   margin-left: 2px;
 }
+.playlistCards{
+  overflow-y: scroll;
+}

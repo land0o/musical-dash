@@ -52,7 +52,7 @@ export default {
   },
   editPlaylist(playlistObj, id) {
     return fetch(`${remoteURL}/playlists/${id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },

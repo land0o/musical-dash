@@ -10,12 +10,13 @@ import {
 import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
 import CreatedPlaylistCard from "./CreatedPlaylistCard";
+import EditPlaylistForm from "./EditPlaylistForm";
 import Spotify from "spotify-web-api-js";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
 const userId = localStorage.getItem("spotifyId");
-const playlistId = localStorage.getItem("playlistId");
+// const playlistId = localStorage.getItem("playlistId");
 
 //2.finish up functionality to get functioning playlist
 //3. refer to the create playlist documention
@@ -37,6 +38,8 @@ class PlaylistHome extends Component {
       playlistDesc: "",
       playlists: [],
       PlaylistId: localStorage.getItem("playlistId"),
+      title: "",
+      description: "",
       editedPlaylist: false
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
@@ -55,7 +58,7 @@ class PlaylistHome extends Component {
       console.log(this.state.playlists);
     });
   };
-//grabs info from input fields 
+  //grabs info from input fields
   handleSubmit = evt => {
     evt.preventDefault();
     const stateToChange = {};
@@ -63,7 +66,7 @@ class PlaylistHome extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
-//creates new playlist and post them to database and spotify
+  //creates new playlist and post them to database and spotify
   getNewPlaylist() {
     spotifyWebApi
       .createPlaylist(userId, {
@@ -86,25 +89,35 @@ class PlaylistHome extends Component {
       });
     alert(`Playlist ${this.state.playlistName} has been created!`);
   }
-  editPlaylistInfo = () => {
-    spotifyWebApi.changePlaylistDetails(playlistId, {
-      name: this.state.playlistName,
-      description: this.state.playlistDesc
-    });
+  editPlaylist = playlist => {
+    console.log(playlist);
+    localStorage.setItem("editPlaylistId", playlist.spotifyId);
+    const playlistId = localStorage.getItem("editPlaylistId");
+    console.log(playlistId);
+    DataManager.editPlaylist(playlist, playlist.id)
+      .then(() => this.grabPlaylist())
+      .then(
+        spotifyWebApi.changePlaylistDetails(playlistId, {
+          name: playlist.title,
+          description: playlist.description
+        })
+      );
   };
-//handles the submission of the playlist
+
+  //handles the submission of the playlist
   addPlaylistInfo = evt => {
     evt.preventDefault();
     this.getNewPlaylist();
     console.log(this.state.PlaylistName);
     console.log(userId);
   };
-//not using yet but will be for toggling play functions
+  //not using yet but will be for toggling play functions
   onRadioBtnClick(rSelected) {
     this.setState({ rSelected });
   }
 
   render() {
+    // this.editPlaylistInfo()
     return (
       <div className="playlistContainer">
         <Card className="playlistCard">
@@ -211,11 +224,20 @@ class PlaylistHome extends Component {
         <div className="UserPlaylists">
           <Card>
             <CardHeader>Playlist Created By MusicalDash</CardHeader>
-            <CardBody>
+            <CardBody className="playlistCards">
               <CardTitle>User created playlist</CardTitle>
               <div>
                 {this.state.playlists.map((playlist, i) => (
-                  <CreatedPlaylistCard playlist={playlist} key={i} />
+                  <div key={i}>
+                    <CreatedPlaylistCard
+                      editPlaylist={this.editPlaylist}
+                      playlist={playlist}
+                    />
+                    <EditPlaylistForm
+                      editPlaylist={this.editPlaylist}
+                      playlist={playlist}
+                    />
+                  </div>
                 ))}
               </div>
             </CardBody>
