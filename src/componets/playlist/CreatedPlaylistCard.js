@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
+import EditPlaylistForm from "./EditPlaylistForm"
 
 class CreatedPlaylistCard extends Component {
+state = {
+  showEditForm: false
+}
+
   render() {
     return (
       <div className="createdPlaylistCard">
@@ -13,7 +18,7 @@ class CreatedPlaylistCard extends Component {
               size="sm"
               color="info"
               className="editPlaylist"
-              onClick={() => this.props.editPlaylist(this.props.playlist)}
+              onClick={() =>this.setState({showEditForm: true})}
             >
               edit
             </Button>
@@ -27,6 +32,13 @@ class CreatedPlaylistCard extends Component {
           </p>
           <hr className="hrLine" />
         </div>
+        {
+          this.state.showEditForm?<EditPlaylistForm 
+          playlist={this.props.playlist} 
+          editPlaylist={this.props.editPlaylist}
+          />: null
+        }
+        
       </div>
     );
   }

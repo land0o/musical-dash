@@ -10,7 +10,7 @@ import {
 import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
 import CreatedPlaylistCard from "./CreatedPlaylistCard";
-import EditPlaylistForm from "./EditPlaylistForm";
+// import EditPlaylistForm from "./EditPlaylistForm";
 import Spotify from "spotify-web-api-js";
 import DataManager from "../DataManager";
 
@@ -89,10 +89,10 @@ class PlaylistHome extends Component {
       });
     alert(`Playlist ${this.state.playlistName} has been created!`);
   }
-  editPlaylist = playlist => {
+  editPlaylist = (playlist, playlistId) => {
     console.log(playlist);
-    localStorage.setItem("editPlaylistId", playlist.spotifyId);
-    const playlistId = localStorage.getItem("editPlaylistId");
+    // localStorage.setItem("editPlaylistId", playlist.spotifyId);
+    // const playlistId = localStorage.getItem("editPlaylistId");
     console.log(playlistId);
     DataManager.editPlaylist(playlist, playlist.id)
       .then(() => this.grabPlaylist())
@@ -233,10 +233,10 @@ class PlaylistHome extends Component {
                       editPlaylist={this.editPlaylist}
                       playlist={playlist}
                     />
-                    <EditPlaylistForm
+                    {/* <EditPlaylistForm
                       editPlaylist={this.editPlaylist}
                       playlist={playlist}
-                    />
+                    /> */}
                   </div>
                 ))}
               </div>

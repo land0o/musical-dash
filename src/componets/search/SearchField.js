@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Searchfield.css";
-import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { InputGroup, Button, Input } from "reactstrap";
 import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
@@ -82,11 +82,11 @@ class SearchField extends Component {
           </InputGroup>
           <CardBody>
             <CardSubtitle className="searchHeader">Search Results</CardSubtitle>
-            <CardText className="cardText">
+            <div className="cardText">
               {this.state.tracks.map((track, index) => (
                 <SongCard {...this.props} track={track} key={index} />
               ))}
-            </CardText>
+            </div>
           </CardBody>
         </Card>
       </div>

@@ -19,14 +19,14 @@ class EditPlaylistForm extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
-  //works but I have to hit edit 1st and it post the playlistId to the database
   handleEdit = () => {
+      const playlistId = this.props.playlist.spotifyId
     const editedPlaylistObj = {
       id: this.props.playlist.id,
       title: this.state.title,
       description: this.state.description
     };
-    this.props.editPlaylist(editedPlaylistObj);
+    this.props.editPlaylist(editedPlaylistObj, playlistId);
   };
 
   render() {
