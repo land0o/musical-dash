@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
 import Spotify from "spotify-web-api-js";
+import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
 const userId = localStorage.getItem("spotifyId");
@@ -44,11 +45,19 @@ class PlaylistHome extends Component {
       .then(playlistResponse => {
         console.log("newPlaylist response", playlistResponse);
         localStorage.setItem("currentPlaylistId", playlistResponse.id);
+        const playlistObj = {
+          spotifyId: playlistResponse.id,
+          title: this.state.playlistName,
+          description: this.state.playlistDesc
+        };
+        console.log(playlistObj);
+        return playlistObj;
+      })
+      .then(playlistObj => {
+        DataManager.postPlaylist(playlistObj);
       });
     alert(`Playlist ${this.state.playlistName} has been created!`);
   }
-  // will need to make a section that holds a users playlist, and then allow them to update pre-made playlist that were made with this app
-  //need to add the login to the landing page remove it from the dashboard
   //need to import the nav and sidebar
   //on the navbar the logo to the left and logout(clear localstoarge and reroute to homepage)
   //need to put the cards into the correct layout
@@ -110,12 +119,11 @@ class PlaylistHome extends Component {
             </CardSubtitle>
             <CardSubtitle>{this.state.playlistDesc}</CardSubtitle>
           </CardBody>
-          <CardText>
+          <div>
             <ButtonGroup>
               <Button
                 outline
                 color="info"
-                s
                 onClick={() => this.onRadioBtnClick(1)}
                 active={this.state.rSelected === 1}
               >
@@ -139,7 +147,7 @@ class PlaylistHome extends Component {
               </Button>
             </ButtonGroup>
             <p>Selected: {this.state.rSelected}</p>
-          </CardText>
+          </div>
           <CardBody className="playlistTable">
             <Table dark className="playlistSelector">
               <thead>

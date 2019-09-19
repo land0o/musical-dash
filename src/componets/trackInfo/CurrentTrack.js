@@ -3,6 +3,7 @@ import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
+import UsersPlaylist from "../playlist/UsersPlaylist";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
@@ -15,6 +16,7 @@ class CurrentTrack extends Component {
       loggedIn: params.access_token ? true : false,
       users: [],
       email: "",
+      test: "",
       userName: "",
       spotifyId: "",
       userImage: "",
@@ -25,6 +27,7 @@ class CurrentTrack extends Component {
     };
     if (params.access_token) {
       spotifyWebApi.setAccessToken(params.access_token);
+      this.getloggedInUser();
     }
   }
   getHashParams() {
@@ -56,39 +59,44 @@ class CurrentTrack extends Component {
       });
     });
   }
-
-  //NEED TO COLLECT USER INFO AND SAVE TO DATABASE ONE TIME SHOULD BE A CONDITIONAL
   getloggedInUser() {
-    spotifyWebApi.getMe().then(response => {
-      const newUser = {
-        email: response.email,
-        userName: response.display_name,
-        spotifyId: response.id,
-        userImage: response.images[0].url
-      };
-      console.log("spotify response", response);
-      console.log(newUser);
-      localStorage.setItem("spotifyId", response.id);
-      localStorage.setItem("SpotifyEmail", response.email);
-    })
+    spotifyWebApi
+      .getMe()
+      .then(response => {
+        const newUser = {
+          email: response.email,
+          userName: response.display_name,
+          spotifyId: response.id,
+          userImage: response.images[0].url
+        };
+        // console.log("spotify response", response);
+        // console.log(newUser);
+        localStorage.setItem("spotifyId", response.id);
+        localStorage.setItem("SpotifyEmail", response.email);
+        this.setState({ newUser: newUser });
+        return response;
+      })
+      .then(response => {
+        // console.log(response);
+        DataManager.checkUsers(response.email, response.id).then(
+          checkedUsers => {
+            if (checkedUsers.length > 0) {
+              this.setState({ test: "hello" });
+            } else {
+              DataManager.postUser(this.state.newUser);
+              this.setState({ test: "hello2" });
+            }
+          }
+        );
+      });
   }
-  //why is it not working?
-  // .then(
-  //   if (this.response.newUser.find(users => users.userName === this.response.userName)) {
-  //    return console.log("user already in database");
-  //  } else {
-  //    DataManager.postUser(this.newUser)
-  //  })
 
   render() {
-    this.getloggedInUser();
+    console.log(this.state);
     return (
       <div className="App">
         <div className="links">
           <h3>Welcome To MusicalDash</h3>
-          <a href="http://localhost:8888">
-            <button className="login">Login with Spotify</button>
-          </a>
         </div>
         <div className="currentSong">
           <div>
@@ -102,7 +110,10 @@ class CurrentTrack extends Component {
               alt="Now Playing"
             />
           </div>
-          <button className="checkSongBtn" onClick={() => this.getNowPlaying()}>
+          <button
+            className="checkSongBtn"
+            onClick={() => this.getNowPlaying()}
+          >
             Check Now Playing
           </button>
         </div>
@@ -111,6 +122,9 @@ class CurrentTrack extends Component {
         </div>
         <div>
           <SearchField {...this.props} />
+        </div>
+        <div>
+          <UsersPlaylist {...this.props} />
         </div>
       </div>
     );

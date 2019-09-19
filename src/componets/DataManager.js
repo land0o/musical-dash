@@ -7,7 +7,7 @@ export default {
       response.json()
     );
   },
-  getAllPlaylist() {
+  getAllPlaylists() {
     return fetch(`${remoteURL}/playlists`).then(response => response.json());
   },
   postPlaylist(playlistObject) {
@@ -50,13 +50,13 @@ export default {
       response => response.json()
     );
   },
-  editPlaylist(chatObj, id) {
+  editPlaylist(playlistObj, id) {
     return fetch(`${remoteURL}/playlists/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(chatObj)
+      body: JSON.stringify(playlistObj)
     }).then(response => response.json());
   }
 };

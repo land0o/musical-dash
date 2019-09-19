@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import ApplicationViews from "./ApplicationViews";
 import "./MusicalDash.css";
 
-class Nutshell extends Component {
+class MusicalDash extends Component {
   render() {
     return (
       <React.Fragment>
@@ -14,4 +14,4 @@ class Nutshell extends Component {
   }
 }
 
-export default Nutshell;
+export default MusicalDash;

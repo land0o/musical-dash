@@ -1,19 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "userName": "12177171325",
       "email": "crutchc@yahoo.com",
+      "userName": "12177171325",
       "spotifyId": "12177171325",
-      "userImage": "https://profile-images.scdn.co/images/userprofile/default/8c957d95765232869c65198047dbdeabb71d610a"
+      "userImage": "https://profile-images.scdn.co/images/userprofile/default/8c957d95765232869c65198047dbdeabb71d610a",
+      "id": 1
     }
   ],
   "playlists": [
     {
-      "id": 1,
-      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
+      "spotifyId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "title": "AppTest",
-      "description": "O Shit it works"
+      "description": "O Shit it works",
+      "id": 1
     }
   ],
   "songsAddedToPlaylist": [

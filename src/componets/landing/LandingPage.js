@@ -18,14 +18,14 @@ class LandingPage extends Component {
         </article>
         <article className="landingBtns">
           <section className="buttons">
+          <a href="http://localhost:8888">
             <Button
-              color="success"
-              onClick={() => this.nextPath("./trackInfo")}
+              outline color="warning"
+              // onClick={() => this.nextPath("./trackInfo")}
             >
-              Build A Playlist
+              Login with Spotify
             </Button>
-            {"  "}
-            <Button color="warning">Join A Playlist</Button>
+            </a>
           </section>
         </article>
       </React.Fragment>
