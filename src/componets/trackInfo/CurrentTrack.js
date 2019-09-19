@@ -24,11 +24,13 @@ class CurrentTrack extends Component {
         image: ""
       }
     };
+    //if user is logged in with spotify returns tokens and post new users to database
     if (params.access_token) {
       spotifyWebApi.setAccessToken(params.access_token);
       this.getloggedInUser();
     }
   }
+  //from spotify grabs tokens that makes app functional
   getHashParams() {
     var hashParams = {};
     var e,
@@ -39,6 +41,7 @@ class CurrentTrack extends Component {
     }
     return hashParams;
   }
+  //shows what is currently playing on users device
   getNowPlaying() {
     spotifyWebApi.getMyCurrentPlaybackState().then(response => {
       console.log(response);
@@ -58,6 +61,7 @@ class CurrentTrack extends Component {
       });
     });
   }
+  //grabs needed info from spotify for the current user and post to database
   getloggedInUser() {
     spotifyWebApi
       .getMe()

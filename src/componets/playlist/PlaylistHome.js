@@ -36,25 +36,26 @@ class PlaylistHome extends Component {
       playlistName: "",
       playlistDesc: "",
       playlists: [],
-      PlaylistId: localStorage.getItem("playlistId")
+      PlaylistId: localStorage.getItem("playlistId"),
+      editedPlaylist: false
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
   }
+  //renders playlist to created playlist card
   componentDidMount() {
     this.grabPlaylist();
   }
+  //function that grabs playlist from database
   grabPlaylist = () => {
     DataManager.getAllPlaylists().then(playlistResponse => {
       console.log(playlistResponse);
       this.setState({
         playlists: playlistResponse
       });
+      console.log(this.state.playlists);
     });
   };
-  editPlaylistInfo = () => {
-    spotifyWebApi.changePlaylistDetails(playlistId, {});
-  };
-
+//grabs info from input fields 
   handleSubmit = evt => {
     evt.preventDefault();
     const stateToChange = {};
@@ -62,7 +63,7 @@ class PlaylistHome extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
-
+//creates new playlist and post them to database and spotify
   getNewPlaylist() {
     spotifyWebApi
       .createPlaylist(userId, {
@@ -85,14 +86,20 @@ class PlaylistHome extends Component {
       });
     alert(`Playlist ${this.state.playlistName} has been created!`);
   }
-
+  editPlaylistInfo = () => {
+    spotifyWebApi.changePlaylistDetails(playlistId, {
+      name: this.state.playlistName,
+      description: this.state.playlistDesc
+    });
+  };
+//handles the submission of the playlist
   addPlaylistInfo = evt => {
     evt.preventDefault();
     this.getNewPlaylist();
     console.log(this.state.PlaylistName);
     console.log(userId);
   };
-
+//not using yet but will be for toggling play functions
   onRadioBtnClick(rSelected) {
     this.setState({ rSelected });
   }

@@ -14,6 +14,7 @@ class SearchField extends Component {
     PlaylistId: localStorage.getItem("playlistId"),
     songSearch: ""
   };
+  //grabs the info from the search input field
   handleSubmit = evt => {
     evt.preventDefault();
     const stateToChange = {};
@@ -21,13 +22,13 @@ class SearchField extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
-
+//submits info and returns results
   songSearch = evt => {
     evt.preventDefault();
     this.searchTracks(this.state.songSearch);
     console.log(this.state.songSearch);
   };
-
+//gets song info from spotify 
   searchTracks = songSearch => {
     spotifyWebApi
       .searchTracks(songSearch)
@@ -39,9 +40,6 @@ class SearchField extends Component {
         console.log(this.state.tracks);
       })
   };
-
-//how do i pass mapped tracks to the btn on the indvidual song?
-//once im able to select a song i need to pass songuri and song id to the current playlist
 
 //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
