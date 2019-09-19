@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  CardTitle,
+  CardSubtitle
+} from "reactstrap";
 import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
+import CreatedPlaylistCard from "./CreatedPlaylistCard";
 import Spotify from "spotify-web-api-js";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
 const userId = localStorage.getItem("spotifyId");
+const playlistId = localStorage.getItem("playlistId");
 
 //1. what functions are needed to create playlist? need userid(is in local storage), name and desc req
 //2.finish up functionality to get functioning playlist
@@ -23,11 +31,27 @@ class PlaylistHome extends Component {
       userId: localStorage.getItem("spotifyId"),
       playlistName: "",
       playlistDesc: "",
-      currentPlaylistId: localStorage.getItem("playlistId"),
+      playlists: [],
+      PlaylistId: localStorage.getItem("playlistId"),
       newPlaylist: []
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
   }
+  componentDidMount() {
+    this.grabPlaylist();
+  }
+  grabPlaylist = () => {
+    DataManager.getAllPlaylists().then(playlistResponse => {
+      console.log(playlistResponse);
+      this.setState({
+        playlists: playlistResponse
+      });
+    });
+  };
+  editPlaylistInfo = () => {
+    spotifyWebApi.changePlaylistDetails(playlistId, {});
+  };
+
   handleSubmit = evt => {
     evt.preventDefault();
     const stateToChange = {};
@@ -181,6 +205,19 @@ class PlaylistHome extends Component {
             </Table>
           </CardBody>
         </Card>
+        <div className="UserPlaylists">
+          <Card>
+            <CardHeader>Playlist Created By MusicalDash</CardHeader>
+            <CardBody>
+              <CardTitle>User created playlist</CardTitle>
+              <div>
+                {this.state.playlists.map((playlist, i) => (
+                  <CreatedPlaylistCard playlist={playlist} key={i} />
+                ))}
+              </div>
+            </CardBody>
+          </Card>
+        </div>
       </div>
     );
   }

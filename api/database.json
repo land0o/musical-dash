@@ -14,6 +14,12 @@
       "title": "AppTest",
       "description": "O Shit it works",
       "id": 1
+    },
+    {
+      "spotifyId": "3nKeFjGKNk31II94iwsvkD",
+      "title": "Playlist Test",
+      "description": "testing new playlist card",
+      "id": 2
     }
   ],
   "songsAddedToPlaylist": [
