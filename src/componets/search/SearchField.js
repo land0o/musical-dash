@@ -6,7 +6,7 @@ import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
 
 const spotifyWebApi = new Spotify();
-const playlistId = localStorage.getItem("playlistId");
+// const playlistId = localStorage.getItem("playlistId");
 
 class SearchField extends Component {
   state = {
@@ -22,30 +22,32 @@ class SearchField extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
-//submits info and returns results
+  //submits info and returns results
   songSearch = evt => {
     evt.preventDefault();
     this.searchTracks(this.state.songSearch);
     console.log(this.state.songSearch);
   };
-//gets song info from spotify 
+  //gets song info from spotify
   searchTracks = songSearch => {
-    spotifyWebApi
-      .searchTracks(songSearch)
-      .then(data => {
-        this.setState({
-          tracks: data.tracks.items,
-          songSearch: ""
-        });
-        console.log(this.state.tracks);
-      })
+    spotifyWebApi.searchTracks(songSearch).then(data => {
+      this.setState({
+        tracks: data.tracks.items,
+        songSearch: ""
+      });
+      console.log(this.state.tracks);
+    });
   };
 
-//to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
+  //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
-    spotifyWebApi.addTracksToPlaylist(playlistId, track.uri).then(data => {
-      console.log("Data returned from songs from spotify", data);
-    });
+    console.log(track);
+    const playlistId = localStorage.getItem("currentPlaylistId");
+    spotifyWebApi
+      .addTracksToPlaylist(playlistId, {id:track.id})
+      .then(data => {
+        console.log("Data returned from songs from spotify", data);
+      });
   };
 
   addSongToPlaylist = track => {
@@ -84,7 +86,12 @@ class SearchField extends Component {
             <CardSubtitle className="searchHeader">Search Results</CardSubtitle>
             <div className="cardText">
               {this.state.tracks.map((track, index) => (
-                <SongCard {...this.props} track={track} key={index} />
+                <SongCard
+                  {...this.props}
+                  track={track}
+                  key={index}
+                  addSongToSpotify={this.addSongToSpotify}
+                />
               ))}
             </div>
           </CardBody>
