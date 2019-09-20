@@ -32,9 +32,11 @@ state = {
           </p>
           <hr className="hrLine" />
         </div>
+        {/* toggles the input field to true so it shows*/}
         {
           this.state.showEditForm?<EditPlaylistForm 
           playlist={this.props.playlist} 
+          deletePlaylist={this.props.deletePlaylist}
           editPlaylist={this.props.editPlaylist}
           />: null
         }

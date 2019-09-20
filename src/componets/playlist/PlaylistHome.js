@@ -86,9 +86,11 @@ class PlaylistHome extends Component {
       })
       .then(playlistObj => {
         DataManager.postPlaylist(playlistObj);
-      });
+      })
+      .then(() => this.grabPlaylist());
     alert(`Playlist ${this.state.playlistName} has been created!`);
   }
+  //edits the dom spotify and my database.
   editPlaylist = (playlist, playlistId) => {
     console.log(playlist);
     // localStorage.setItem("editPlaylistId", playlist.spotifyId);
@@ -102,6 +104,12 @@ class PlaylistHome extends Component {
           description: playlist.description
         })
       );
+  };
+
+  deletePlaylist = id => {
+    DataManager.deletePlaylist(id).then(() =>
+      this.grabPlaylist()
+    );
   };
 
   //handles the submission of the playlist
@@ -231,6 +239,7 @@ class PlaylistHome extends Component {
                   <div key={i}>
                     <CreatedPlaylistCard
                       editPlaylist={this.editPlaylist}
+                      deletePlaylist={this.deletePlaylist}
                       playlist={playlist}
                     />
                     {/* <EditPlaylistForm

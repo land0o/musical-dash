@@ -5,7 +5,7 @@ class EditPlaylistForm extends Component {
     title: "",
     description: ""
   };
-  
+
   componentDidMount() {
     this.setState({
       title: this.props.playlist.title,
@@ -20,13 +20,16 @@ class EditPlaylistForm extends Component {
     console.log(stateToChange);
   };
   handleEdit = () => {
-      const playlistId = this.props.playlist.spotifyId
+    const playlistId = this.props.playlist.spotifyId;
     const editedPlaylistObj = {
       id: this.props.playlist.id,
       title: this.state.title,
       description: this.state.description
     };
     this.props.editPlaylist(editedPlaylistObj, playlistId);
+  };
+  handleDelete = () => {
+    this.props.deletePlaylist(this.props.playlist.id)
   };
 
   render() {
@@ -45,6 +48,7 @@ class EditPlaylistForm extends Component {
             value={this.state.description}
             onChange={this.handleInput}
           />
+          <br />
           <Button
             size="sm"
             color="info"
@@ -52,6 +56,14 @@ class EditPlaylistForm extends Component {
             onClick={this.handleEdit}
           >
             save
+          </Button>
+          <Button
+            size="sm"
+            color="info"
+            className="editPlaylist"
+            onClick={this.handleDelete}
+          >
+            Delete
           </Button>
           <hr className="hrLine" />
         </div>
