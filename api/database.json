@@ -1,25 +1,31 @@
 {
   "users": [
     {
-      "id": 1,
-      "userName": "12177171325",
       "email": "crutchc@yahoo.com",
-      "spotifyId": "",
-      "userImage": ""
+      "userName": "12177171325",
+      "spotifyId": "12177171325",
+      "userImage": "https://profile-images.scdn.co/images/userprofile/default/8c957d95765232869c65198047dbdeabb71d610a",
+      "id": 1
     }
   ],
   "playlists": [
     {
-      "id": 1,
-      "spotifyId": "",
-      "title": "Code Juice",
-      "description": "Code N Jam"
+      "spotifyId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "title": "AppTest",
+      "description": "lets see if it works on all 3",
+      "id": 1
+    },
+    {
+      "spotifyId": "3nKeFjGKNk31II94iwsvkD",
+      "title": "Playlist Test",
+      "description": "testing new playlist card",
+      "id": 2
     }
   ],
   "songsAddedToPlaylist": [
     {
       "id": 1,
-      "spotifyId": "",
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
       "playlistId": 1,
       "songName": "Millionaire",
       "albumName": "The Stranger",
@@ -28,7 +34,7 @@
       "song_id": "2rhFaau65TFMv4mACtE9it"
     },
     {
-      "spotifyId": "",
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
       "playlistId": 1,
       "songName": "Scenes from an Italian Restaurant",
       "albumName": "The Stranger",
@@ -38,7 +44,7 @@
       "id": 2
     },
     {
-      "spotifyId": "",
+      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
       "playlistId": 1,
       "songName": "Exactly",
       "albumName": "Shalow Graves For Toys",

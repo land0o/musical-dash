@@ -26,3 +26,6 @@
   background: url(./img/beat-headphones.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
+.hrLine{
+  border: 1px solid #61dafb;
+}

@@ -3,6 +3,7 @@ import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
+import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
 
@@ -12,15 +13,24 @@ class CurrentTrack extends Component {
     const params = this.getHashParams();
     this.state = {
       loggedIn: params.access_token ? true : false,
+      users: [],
+      email: "",
+      test: "",
+      userName: "",
+      spotifyId: "",
+      userImage: "",
       nowPlaying: {
         name: "Not Checked",
         image: ""
       }
     };
+    //if user is logged in with spotify returns tokens and post new users to database
     if (params.access_token) {
       spotifyWebApi.setAccessToken(params.access_token);
+      this.getloggedInUser();
     }
   }
+  //from spotify grabs tokens that makes app functional
   getHashParams() {
     var hashParams = {};
     var e,
@@ -31,6 +41,7 @@ class CurrentTrack extends Component {
     }
     return hashParams;
   }
+  //shows what is currently playing on users device
   getNowPlaying() {
     spotifyWebApi.getMyCurrentPlaybackState().then(response => {
       console.log(response);
@@ -42,13 +53,62 @@ class CurrentTrack extends Component {
       });
     });
   }
+  componentDidMount() {
+    // getAll users from database
+    DataManager.getAllUsers().then(users => {
+      this.setState({
+        users: users
+      });
+    });
+  }
+  //grabs needed info from spotify for the current user and post to database
+  getloggedInUser() {
+    spotifyWebApi
+      .getMe()
+      .then(response => {
+        const newUser = {
+          email: response.email,
+          userName: response.display_name,
+          spotifyId: response.id,
+          userImage: response.images[0].url
+        };
+        // console.log("spotify response", response);
+        // console.log(newUser);
+        localStorage.setItem("spotifyId", response.id);
+        localStorage.setItem("SpotifyEmail", response.email);
+        this.setState({ newUser: newUser });
+        return response;
+      })
+      .then(response => {
+        // console.log(response);
+        DataManager.checkUsers(response.email, response.id).then(
+          checkedUsers => {
+            if (checkedUsers.length > 0) {
+              this.setState({ test: "hello" });
+            } else {
+              DataManager.postUser(this.state.newUser);
+              this.setState({ test: "hello2" });
+            }
+          }
+        );
+      });
+  }
+
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <div className="links">
           <h3>Welcome To MusicalDash</h3>
           <a href="http://localhost:8888">
-            <button className="login">Login with Spotify</button>
+            <button>
+              Refresh Tokens
+            </button>
+          </a>
+          <a href="http://localhost:3000">
+            <button>
+              Logout
+            </button>
           </a>
         </div>
         <div className="currentSong">
