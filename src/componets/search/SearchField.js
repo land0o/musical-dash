@@ -41,24 +41,24 @@ class SearchField extends Component {
 
   //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
-    console.log(track);
+    console.log("track going into spotify post", track.song_uri);
     const playlistId = localStorage.getItem("currentPlaylistId");
-    spotifyWebApi
-      .addTracksToPlaylist(playlistId, {id:track.id})
-      .then(data => {
-        console.log("Data returned from songs from spotify", data);
-      });
+    console.log("playlist id", playlistId);
+    spotifyWebApi.addTracksToPlaylist(playlistId, track.song_uri).then(data => {
+      console.log("Data returned from songs from spotify", data);
+    });
   };
 
-  addSongToPlaylist = track => {
-    const songInfo = {
-      songName: track.name,
-      albumName: track.album.name,
-      artistName: track.artists[0].name,
-      song_uri: track.id,
-      song_id: track.uri
-    };
-  };
+  // addSongToPlaylist = track => {
+  //   const songInfo = {
+  //     songName: track.name,
+  //     albumName: track.album.name,
+  //     artistName: track.artists[0].name,
+  //     song_uri: track.uri,
+  //     song_id: track.id
+  //   };
+  // };
+
   //use map to iterate over the search results to elect one song and get the info needed(id,songURi, name and artist)
   //1. allow search for tracks to be added to playlist
   //2. send a confirmation alert to add song
