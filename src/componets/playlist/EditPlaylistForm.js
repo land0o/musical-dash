@@ -29,7 +29,8 @@ class EditPlaylistForm extends Component {
     this.props.editPlaylist(editedPlaylistObj, playlistId);
   };
   handleDelete = () => {
-    this.props.deletePlaylist(this.props.playlist.id)
+    const playlistId = this.props.playlist.spotifyId;
+    this.props.deletePlaylist(this.props.playlist.id, playlistId);
   };
 
   render() {

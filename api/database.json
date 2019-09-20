@@ -22,15 +22,9 @@
       "id": 2
     },
     {
-      "spotifyId": "1lcQsjCUQCzrV1cF4Hi940",
-      "title": "Demo 5",
-      "description": "Andy",
-      "id": 3
-    },
-    {
       "spotifyId": "4u4fr4cvU3crHlpsrTftd6",
       "title": "Demo",
-      "description": "howdy",
+      "description": "playlist with songs",
       "id": 4
     }
   ],
