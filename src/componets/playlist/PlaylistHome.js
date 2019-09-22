@@ -72,6 +72,7 @@ class PlaylistHome extends Component {
       .then(playlistResponse => {
         console.log("newPlaylist response", playlistResponse);
         localStorage.setItem("currentPlaylistId", playlistResponse.id);
+        localStorage.setItem("currentPlaylistName", this.state.playlistName);
         const playlistObj = {
           spotifyId: playlistResponse.id,
           title: this.state.playlistName,

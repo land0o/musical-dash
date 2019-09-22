@@ -4,6 +4,7 @@ import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { InputGroup, Button, Input } from "reactstrap";
 import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
+import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
 // const playlistId = localStorage.getItem("playlistId");
@@ -43,12 +44,16 @@ class SearchField extends Component {
   addSongToSpotify = track => {
     console.log("track going into spotify post", track.song_uri);
     const playlistId = localStorage.getItem("currentPlaylistId");
+    const playlistName = localStorage.getItem("currentPlaylistName");
     console.log("playlist id", playlistId);
     spotifyWebApi.addTracksToPlaylist(playlistId, track.song_uri).then(data => {
       console.log("Data returned from songs from spotify", data);
-    });
+    }).then(DataManager.postSong(track))
+    alert(`${track.songName} has been added to ${playlistName}`);
   };
-
+  // setSongToJson = () => {
+  //   
+  // }
   // addSongToPlaylist = track => {
   //   const songInfo = {
   //     songName: track.name,

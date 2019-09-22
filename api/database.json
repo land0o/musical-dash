@@ -6,12 +6,19 @@
       "spotifyId": "12177171325",
       "userImage": "https://profile-images.scdn.co/images/userprofile/default/8c957d95765232869c65198047dbdeabb71d610a",
       "id": 1
+    },
+    {
+      "email": "eryn_hudson@yahoo.com",
+      "userName": "tink",
+      "spotifyId": "jtowxgcgpdzemj095qfh344so",
+      "userImage": "https://profile-images.scdn.co/images/userprofile/default/f74127df4c69e849d07bc33895d780f49fc58cb4",
+      "id": 2
     }
   ],
   "playlists": [
     {
       "spotifyId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
-      "title": "AppTes",
+      "title": "AppTest",
       "description": "lets see if it works on all 3",
       "id": 1
     },
@@ -26,6 +33,12 @@
       "title": "Demo",
       "description": "playlist with songs",
       "id": 4
+    },
+    {
+      "spotifyId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "title": "ErynNKit",
+      "description": "Chili mix",
+      "id": 5
     }
   ],
   "songsAddedToPlaylist": [
@@ -58,6 +71,75 @@
       "song_uri": "spotify:track:0SzSJWuWeYnDBIPYuNCJ28",
       "song_id": "0SzSJWuWeYnDBIPYuNCJ28",
       "id": 3
+    },
+    {
+      "songName": "No Problem (feat. Lil Wayne & 2 Chainz)",
+      "albumName": "Coloring Book",
+      "artistName": "Chance the Rapper",
+      "song_uri": [
+        "spotify:track:0v9Wz8o0BT8DU38R4ddjeH"
+      ],
+      "song_id": "0v9Wz8o0BT8DU38R4ddjeH",
+      "id": 8
+    },
+    {
+      "songName": "Game Ova",
+      "albumName": "Game Ova",
+      "artistName": "tobi lou",
+      "song_uri": [
+        "spotify:track:4QbVWCAkh9Z1G041cQAiZ9"
+      ],
+      "song_id": "4QbVWCAkh9Z1G041cQAiZ9",
+      "playlistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "id": 9
+    },
+    {
+      "songName": "Before I Let You Go",
+      "albumName": "Blackstreet",
+      "artistName": "Blackstreet",
+      "song_uri": [
+        "spotify:track:2rkVoKVEMuct8SmEIGKzBw"
+      ],
+      "song_id": "2rkVoKVEMuct8SmEIGKzBw",
+      "playlistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 10
+    },
+    {
+      "songName": "Get Me Home",
+      "albumName": "Ill Na Na",
+      "artistName": "Foxy Brown",
+      "song_uri": [
+        "spotify:track:6Xo9osN1HErsEJoqwj4eDg"
+      ],
+      "song_id": "6Xo9osN1HErsEJoqwj4eDg",
+      "playlistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 11
+    },
+    {
+      "songName": "Usher",
+      "albumName": "Baby Talk 5",
+      "artistName": "DaBaby",
+      "song_uri": [
+        "spotify:track:71WmhNFdGurCrFbyDyYe1C"
+      ],
+      "song_id": "71WmhNFdGurCrFbyDyYe1C",
+      "playlistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 12
+    },
+    {
+      "songName": "Usher",
+      "albumName": "Baby Talk 5",
+      "artistName": "DaBaby",
+      "song_uri": [
+        "spotify:track:71WmhNFdGurCrFbyDyYe1C"
+      ],
+      "song_id": "71WmhNFdGurCrFbyDyYe1C",
+      "playlistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 13
     }
   ],
   "sessionPlaylist": [
