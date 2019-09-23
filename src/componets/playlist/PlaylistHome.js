@@ -18,15 +18,11 @@ const spotifyWebApi = new Spotify();
 const userId = localStorage.getItem("spotifyId");
 // const playlistId = localStorage.getItem("playlistId");
 
-//2.finish up functionality to get functioning playlist
-//3. refer to the create playlist documention
 //4. will need a button to save playlist to database and to users spotify
 //5. a end playlist btn?
 //6.need to import the nav and sidebar
 //7.on the navbar the logo to the left and logout(clear localstoarge and reroute to homepage)
 //8.need to put the cards into the correct layout
-//9.will need to create a section that shows user's playlist and allow them to be crud'd
-//10.edit playlist
 
 class PlaylistHome extends Component {
   constructor(props) {
@@ -76,6 +72,7 @@ class PlaylistHome extends Component {
       .then(playlistResponse => {
         console.log("newPlaylist response", playlistResponse);
         localStorage.setItem("currentPlaylistId", playlistResponse.id);
+        localStorage.setItem("currentPlaylistName", this.state.playlistName);
         const playlistObj = {
           spotifyId: playlistResponse.id,
           title: this.state.playlistName,
@@ -106,10 +103,11 @@ class PlaylistHome extends Component {
       );
   };
 
-  deletePlaylist = id => {
-    DataManager.deletePlaylist(id).then(() =>
-      this.grabPlaylist()
-    );
+  deletePlaylist = (id, playlistId) => {
+    DataManager.deletePlaylist(id)
+      .then(spotifyWebApi.unfollowPlaylist(playlistId))
+      .then(() => this.grabPlaylist());
+      alert("Playlist has been deleted")
   };
 
   //handles the submission of the playlist

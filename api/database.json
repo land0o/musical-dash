@@ -6,6 +6,13 @@
       "spotifyId": "12177171325",
       "userImage": "https://profile-images.scdn.co/images/userprofile/default/8c957d95765232869c65198047dbdeabb71d610a",
       "id": 1
+    },
+    {
+      "email": "eryn_hudson@yahoo.com",
+      "userName": "tink",
+      "spotifyId": "jtowxgcgpdzemj095qfh344so",
+      "userImage": "https://profile-images.scdn.co/images/userprofile/default/f74127df4c69e849d07bc33895d780f49fc58cb4",
+      "id": 2
     }
   ],
   "playlists": [
@@ -20,6 +27,18 @@
       "title": "Playlist Test",
       "description": "testing new playlist card",
       "id": 2
+    },
+    {
+      "spotifyId": "4u4fr4cvU3crHlpsrTftd6",
+      "title": "Demo",
+      "description": "playlist with songs",
+      "id": 4
+    },
+    {
+      "spotifyId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "title": "ErynNKit",
+      "description": "Chili mix",
+      "id": 5
     }
   ],
   "songsAddedToPlaylist": [
@@ -52,6 +71,150 @@
       "song_uri": "spotify:track:0SzSJWuWeYnDBIPYuNCJ28",
       "song_id": "0SzSJWuWeYnDBIPYuNCJ28",
       "id": 3
+    },
+    {
+      "songName": "No Problem (feat. Lil Wayne & 2 Chainz)",
+      "albumName": "Coloring Book",
+      "artistName": "Chance the Rapper",
+      "song_uri": ["spotify:track:0v9Wz8o0BT8DU38R4ddjeH"],
+      "song_id": "0v9Wz8o0BT8DU38R4ddjeH",
+      "playlistName": "ErynNKit",
+      "id": 8
+    },
+    {
+      "songName": "Game Ova",
+      "albumName": "Game Ova",
+      "artistName": "tobi lou",
+      "song_uri": ["spotify:track:4QbVWCAkh9Z1G041cQAiZ9"],
+      "song_id": "4QbVWCAkh9Z1G041cQAiZ9",
+      "playlistId": 5,
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 9
+    },
+    {
+      "songName": "Before I Let You Go",
+      "albumName": "Blackstreet",
+      "artistName": "Blackstreet",
+      "song_uri": ["spotify:track:2rkVoKVEMuct8SmEIGKzBw"],
+      "song_id": "2rkVoKVEMuct8SmEIGKzBw",
+      "playlistId": 5,
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 10
+    },
+    {
+      "songName": "Get Me Home",
+      "albumName": "Ill Na Na",
+      "artistName": "Foxy Brown",
+      "song_uri": ["spotify:track:6Xo9osN1HErsEJoqwj4eDg"],
+      "song_id": "6Xo9osN1HErsEJoqwj4eDg",
+      "playlistId": 5,
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 11
+    },
+    {
+      "songName": "Usher",
+      "albumName": "Baby Talk 5",
+      "artistName": "DaBaby",
+      "song_uri": ["spotify:track:71WmhNFdGurCrFbyDyYe1C"],
+      "song_id": "71WmhNFdGurCrFbyDyYe1C",
+      "playlistId": 5,
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 12
+    },
+    {
+      "songName": "Usher",
+      "albumName": "Baby Talk 5",
+      "artistName": "DaBaby",
+      "song_uri": ["spotify:track:71WmhNFdGurCrFbyDyYe1C"],
+      "song_id": "71WmhNFdGurCrFbyDyYe1C",
+      "playlistId": 5,
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 13
+    },
+    {
+      "songName": "Girls Like You (feat. Cardi B)",
+      "albumName": "Red Pill Blues (Deluxe)",
+      "artistName": "Maroon 5",
+      "song_uri": ["spotify:track:6V1bu6o1Yo5ZXnsCJU8Ovk"],
+      "song_id": "6V1bu6o1Yo5ZXnsCJU8Ovk",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 14
+    },
+    {
+      "songName": "Money",
+      "albumName": "Money",
+      "artistName": "Cardi B",
+      "song_uri": ["spotify:track:2GGMabyHXnJmjY6CXhhB2e"],
+      "song_id": "2GGMabyHXnJmjY6CXhhB2e",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 15
+    },
+    {
+      "songName": "Bodak Yellow",
+      "albumName": "Invasion of Privacy",
+      "artistName": "Cardi B",
+      "song_uri": ["spotify:track:6KBYefIoo7KydImq1uUQlL"],
+      "song_id": "6KBYefIoo7KydImq1uUQlL",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 16
+    },
+    {
+      "songName": "BMO",
+      "albumName": "Shea Butter Baby",
+      "artistName": "Ari Lennox",
+      "song_uri": ["spotify:track:7Ffgp7DIow5wECYQyzEiTq"],
+      "song_id": "7Ffgp7DIow5wECYQyzEiTq",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 17
+    },
+    {
+      "songName": "Up Late",
+      "albumName": "Shea Butter Baby",
+      "artistName": "Ari Lennox",
+      "song_uri": ["spotify:track:4ZSQS1o7qYAXJa5I37lk5x"],
+      "song_id": "4ZSQS1o7qYAXJa5I37lk5x",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 18
+    },
+    {
+      "songName": "In My Feelings",
+      "albumName": "Scorpion",
+      "artistName": "Drake",
+      "song_uri": ["spotify:track:2G7V7zsVDxg1yRsu7Ew9RJ"],
+      "song_id": "2G7V7zsVDxg1yRsu7Ew9RJ",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 19
+    },
+    {
+      "songName": "Blow the Whistle",
+      "albumName": "Blow The Whistle",
+      "artistName": "Too $hort",
+      "song_uri": ["spotify:track:2lMg3lCMOGistaWBNGjuT3"],
+      "song_id": "2lMg3lCMOGistaWBNGjuT3",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 20
+    },
+    {
+      "songName": "Old Time Rock & Roll",
+      "albumName": "Stranger In Town",
+      "artistName": "Bob Seger",
+      "song_uri": ["spotify:track:5EOoMWIB9iK4ZpcSex9Ec7"],
+      "song_id": "5EOoMWIB9iK4ZpcSex9Ec7",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistName": "ErynNKit",
+      "id": 21
     }
   ],
   "sessionPlaylist": [

@@ -6,6 +6,7 @@ class CreatedPlaylistCard extends Component {
 state = {
   showEditForm: false
 }
+//add music btn needs to set playlistId into state or local storage while also adding playlist info and tracks[] into state to manipulate the dom may need to use componet did mount to render 
 
   render() {
     return (

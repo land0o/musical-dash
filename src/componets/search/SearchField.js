@@ -4,9 +4,10 @@ import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { InputGroup, Button, Input } from "reactstrap";
 import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
+import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
-const playlistId = localStorage.getItem("playlistId");
+// const playlistId = localStorage.getItem("playlistId");
 
 class SearchField extends Component {
   state = {
@@ -22,41 +23,48 @@ class SearchField extends Component {
     this.setState(stateToChange);
     console.log(stateToChange);
   };
-//submits info and returns results
+  //submits info and returns results
   songSearch = evt => {
     evt.preventDefault();
     this.searchTracks(this.state.songSearch);
     console.log(this.state.songSearch);
   };
-//gets song info from spotify 
+  //gets song info from spotify
   searchTracks = songSearch => {
-    spotifyWebApi
-      .searchTracks(songSearch)
-      .then(data => {
-        this.setState({
-          tracks: data.tracks.items,
-          songSearch: ""
-        });
-        console.log(this.state.tracks);
-      })
-  };
-
-//to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
-  addSongToSpotify = track => {
-    spotifyWebApi.addTracksToPlaylist(playlistId, track.uri).then(data => {
-      console.log("Data returned from songs from spotify", data);
+    spotifyWebApi.searchTracks(songSearch).then(data => {
+      this.setState({
+        tracks: data.tracks.items,
+        songSearch: ""
+      });
+      console.log(this.state.tracks);
     });
   };
 
-  addSongToPlaylist = track => {
-    const songInfo = {
-      songName: track.name,
-      albumName: track.album.name,
-      artistName: track.artists[0].name,
-      song_uri: track.id,
-      song_id: track.uri
-    };
+  //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
+  addSongToSpotify = track => {
+    console.log("track going into spotify post", track.song_uri);
+    const playlistId = localStorage.getItem("currentPlaylistId");
+    const playlistName = localStorage.getItem("currentPlaylistName");
+    console.log("playlist id", playlistId);
+    console.log(track);
+    spotifyWebApi.addTracksToPlaylist(playlistId, track.song_uri).then(data => {
+      console.log("Data returned from songs from spotify", data);
+    }).then(DataManager.postSong(track))
+    alert(`${track.songName} has been added to ${playlistName}`);
   };
+  // setSongToJson = () => {
+  //   
+  // }
+  // addSongToPlaylist = track => {
+  //   const songInfo = {
+  //     songName: track.name,
+  //     albumName: track.album.name,
+  //     artistName: track.artists[0].name,
+  //     song_uri: track.uri,
+  //     song_id: track.id
+  //   };
+  // };
+
   //use map to iterate over the search results to elect one song and get the info needed(id,songURi, name and artist)
   //1. allow search for tracks to be added to playlist
   //2. send a confirmation alert to add song
@@ -84,7 +92,12 @@ class SearchField extends Component {
             <CardSubtitle className="searchHeader">Search Results</CardSubtitle>
             <div className="cardText">
               {this.state.tracks.map((track, index) => (
-                <SongCard {...this.props} track={track} key={index} />
+                <SongCard
+                  {...this.props}
+                  track={track}
+                  key={index}
+                  addSongToSpotify={this.addSongToSpotify}
+                />
               ))}
             </div>
           </CardBody>
