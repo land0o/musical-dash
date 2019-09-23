@@ -14,6 +14,7 @@ export class SongCard extends Component {
   addSongToPlaylist = event => {
     const playlistId = localStorage.getItem("currentPlaylistId")
     const playlistName = localStorage.getItem("currentPlaylistName")
+    const currentPlaylistId = localStorage.getItem("currentPlaylistId");
     const songInfo = {
       songName: this.props.track.name,
       albumName: this.props.track.album.name,
@@ -21,7 +22,7 @@ export class SongCard extends Component {
       song_uri: [this.props.track.uri],
       song_id: this.props.track.id,
       spotifyPlaylistId: playlistId,
-      playlistId: this.props.id,
+      playlistId: parseInt(currentPlaylistId),
       playlistName: playlistName
     };
     this.props.addSongToSpotify(songInfo);

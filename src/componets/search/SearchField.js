@@ -47,27 +47,15 @@ class SearchField extends Component {
     const playlistName = localStorage.getItem("currentPlaylistName");
     console.log("playlist id", playlistId);
     console.log(track);
-    spotifyWebApi.addTracksToPlaylist(playlistId, track.song_uri).then(data => {
-      console.log("Data returned from songs from spotify", data);
-    }).then(DataManager.postSong(track))
+    spotifyWebApi
+      .addTracksToPlaylist(playlistId, track.song_uri)
+      .then(data => {
+        console.log("Data returned from songs from spotify", data);
+      })
+      .then(DataManager.postSong(track));
     alert(`${track.songName} has been added to ${playlistName}`);
   };
-  // setSongToJson = () => {
-  //   
-  // }
-  // addSongToPlaylist = track => {
-  //   const songInfo = {
-  //     songName: track.name,
-  //     albumName: track.album.name,
-  //     artistName: track.artists[0].name,
-  //     song_uri: track.uri,
-  //     song_id: track.id
-  //   };
-  // };
 
-  //use map to iterate over the search results to elect one song and get the info needed(id,songURi, name and artist)
-  //1. allow search for tracks to be added to playlist
-  //2. send a confirmation alert to add song
   //2. collect song id and song uri add to queued array for playlist and database with a post fetch
   //3. display songs that were added to playlist to the table and display track, artist, album
 

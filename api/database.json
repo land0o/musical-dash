@@ -19,7 +19,7 @@
     {
       "spotifyId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "title": "AppTest",
-      "description": "lets see if it works on all 3",
+      "description": "testing edit",
       "id": 1
     },
     {
@@ -27,12 +27,6 @@
       "title": "Playlist Test",
       "description": "testing new playlist card",
       "id": 2
-    },
-    {
-      "spotifyId": "4u4fr4cvU3crHlpsrTftd6",
-      "title": "Demo",
-      "description": "playlist with songs",
-      "id": 4
     },
     {
       "spotifyId": "7wxgYsSGtdHvl3DLCk3EOz",
@@ -51,26 +45,6 @@
       "artistName": "Chris Stapleton",
       "song_uri": "spotify:track:2rhFaau65TFMv4mACtE9it",
       "song_id": "2rhFaau65TFMv4mACtE9it"
-    },
-    {
-      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
-      "playlistId": 1,
-      "songName": "Scenes from an Italian Restaurant",
-      "albumName": "The Stranger",
-      "artistName": "Billy Joel",
-      "song_uri": "spotify:track:3utq2FgD1pkmIoaWfjXWAU",
-      "song_id": "3utq2FgD1pkmIoaWfjXWAU",
-      "id": 2
-    },
-    {
-      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
-      "playlistId": 1,
-      "songName": "Exactly",
-      "albumName": "Shalow Graves For Toys",
-      "artistName": "EarthGang",
-      "song_uri": "spotify:track:0SzSJWuWeYnDBIPYuNCJ28",
-      "song_id": "0SzSJWuWeYnDBIPYuNCJ28",
-      "id": 3
     },
     {
       "songName": "No Problem (feat. Lil Wayne & 2 Chainz)",
@@ -143,6 +117,7 @@
       "song_uri": ["spotify:track:6V1bu6o1Yo5ZXnsCJU8Ovk"],
       "song_id": "6V1bu6o1Yo5ZXnsCJU8Ovk",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 14
     },
@@ -153,6 +128,7 @@
       "song_uri": ["spotify:track:2GGMabyHXnJmjY6CXhhB2e"],
       "song_id": "2GGMabyHXnJmjY6CXhhB2e",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 15
     },
@@ -163,6 +139,7 @@
       "song_uri": ["spotify:track:6KBYefIoo7KydImq1uUQlL"],
       "song_id": "6KBYefIoo7KydImq1uUQlL",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 16
     },
@@ -173,6 +150,7 @@
       "song_uri": ["spotify:track:7Ffgp7DIow5wECYQyzEiTq"],
       "song_id": "7Ffgp7DIow5wECYQyzEiTq",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 17
     },
@@ -183,6 +161,7 @@
       "song_uri": ["spotify:track:4ZSQS1o7qYAXJa5I37lk5x"],
       "song_id": "4ZSQS1o7qYAXJa5I37lk5x",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 18
     },
@@ -193,6 +172,7 @@
       "song_uri": ["spotify:track:2G7V7zsVDxg1yRsu7Ew9RJ"],
       "song_id": "2G7V7zsVDxg1yRsu7Ew9RJ",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 19
     },
@@ -203,6 +183,7 @@
       "song_uri": ["spotify:track:2lMg3lCMOGistaWBNGjuT3"],
       "song_id": "2lMg3lCMOGistaWBNGjuT3",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 20
     },
@@ -213,8 +194,31 @@
       "song_uri": ["spotify:track:5EOoMWIB9iK4ZpcSex9Ec7"],
       "song_id": "5EOoMWIB9iK4ZpcSex9Ec7",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 21
+    },
+    {
+      "songName": "Burn Rubber On Me (Why You Wanna Hurt Me)",
+      "albumName": "Greatest Hits",
+      "artistName": "The Gap Band",
+      "song_uri": ["spotify:track:32YzjV133gteg9LMBGO2OA"],
+      "song_id": "32YzjV133gteg9LMBGO2OA",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "playlistName": "AppTest",
+      "id": 22
+    },
+    {
+      "songName": "Hello",
+      "albumName": "25",
+      "artistName": "Adele",
+      "song_uri": ["spotify:track:4sPmO7WMQUAf45kwMOtONw"],
+      "song_id": "4sPmO7WMQUAf45kwMOtONw",
+      "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
+      "playlistId": 2,
+      "playlistName": "Playlist Test",
+      "id": 23
     }
   ],
   "sessionPlaylist": [

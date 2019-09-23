@@ -107,7 +107,7 @@ class PlaylistHome extends Component {
     DataManager.deletePlaylist(id)
       .then(spotifyWebApi.unfollowPlaylist(playlistId))
       .then(() => this.grabPlaylist());
-      alert("Playlist has been deleted")
+    alert("Playlist has been deleted");
   };
 
   //handles the submission of the playlist
@@ -117,6 +117,16 @@ class PlaylistHome extends Component {
     console.log(this.state.PlaylistName);
     console.log(userId);
   };
+  //will add playlist to storage or state for mod
+  addCurrentPlaylistToStorage = (PlaylistObj, playlistId) => {
+    localStorage.setItem("currentPlaylistId", playlistId);
+    localStorage.setItem("currentPlaylistName", PlaylistObj.title);
+    localStorage.setItem("PlaylistId", PlaylistObj.id);
+    const currentPlaylistName1 = localStorage.getItem("currentPlaylistName");
+    console.log(playlistId);
+    console.log(currentPlaylistName1);
+  };
+
   //not using yet but will be for toggling play functions
   onRadioBtnClick(rSelected) {
     this.setState({ rSelected });
@@ -239,6 +249,9 @@ class PlaylistHome extends Component {
                       editPlaylist={this.editPlaylist}
                       deletePlaylist={this.deletePlaylist}
                       playlist={playlist}
+                      addCurrentPlaylistToStorage={
+                        this.addCurrentPlaylistToStorage
+                      }
                     />
                     {/* <EditPlaylistForm
                       editPlaylist={this.editPlaylist}
