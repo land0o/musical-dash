@@ -46,6 +46,7 @@ class SearchField extends Component {
     const playlistId = localStorage.getItem("currentPlaylistId");
     const playlistName = localStorage.getItem("currentPlaylistName");
     console.log("playlist id", playlistId);
+    console.log(track);
     spotifyWebApi.addTracksToPlaylist(playlistId, track.song_uri).then(data => {
       console.log("Data returned from songs from spotify", data);
     }).then(DataManager.postSong(track))

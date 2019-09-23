@@ -20,10 +20,12 @@ export class SongCard extends Component {
       artistName: this.props.track.artists[0].name,
       song_uri: [this.props.track.uri],
       song_id: this.props.track.id,
-      playlistId: playlistId,
+      spotifyPlaylistId: playlistId,
+      playlistId: this.props.id,
       playlistName: playlistName
     };
     this.props.addSongToSpotify(songInfo);
+    console.log(songInfo);
   };
 
   render() {

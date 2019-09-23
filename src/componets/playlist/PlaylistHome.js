@@ -104,11 +104,10 @@ class PlaylistHome extends Component {
   };
 
   deletePlaylist = (id, playlistId) => {
-    // localStorage.setItem("editPlaylistId", playlist.spotifyId);
-    // const playlistId = localStorage.getItem("editPlaylistId");
     DataManager.deletePlaylist(id)
       .then(spotifyWebApi.unfollowPlaylist(playlistId))
       .then(() => this.grabPlaylist());
+      alert("Playlist has been deleted")
   };
 
   //handles the submission of the playlist
