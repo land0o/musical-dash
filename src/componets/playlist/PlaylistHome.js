@@ -123,7 +123,9 @@ class PlaylistHome extends Component {
     localStorage.setItem("currentPlaylistName", PlaylistObj.title);
     localStorage.setItem("PlaylistId", PlaylistObj.id);
     const currentPlaylistName1 = localStorage.getItem("currentPlaylistName");
+    const playlistIdNum = localStorage.getItem("PlaylistId");
     console.log(playlistId);
+    console.log(playlistIdNum);
     console.log(currentPlaylistName1);
   };
 
