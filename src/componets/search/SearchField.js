@@ -7,12 +7,12 @@ import SongCard from "./SongCard";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
-// const playlistId = localStorage.getItem("playlistId");
+// const this.props.playlistId = sessionStorage.getItem("playlistId");
 
 class SearchField extends Component {
   state = {
     tracks: [],
-    PlaylistId: localStorage.getItem("playlistId"),
+    // PlaylistId: sessionStorage.getItem("playlistId"),
     songSearch: ""
   };
   //grabs the info from the search input field
@@ -43,23 +43,23 @@ class SearchField extends Component {
   //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
     console.log("track going into spotify post", track.song_uri);
-    const playlistId = localStorage.getItem("currentPlaylistId");
-    const playlistName = localStorage.getItem("currentPlaylistName");
-    console.log("playlist id", playlistId);
+    // const playlistName = sessionStorage.getItem("currentPlaylistName");
+    console.log("playlist id",this.props.playlistId);
     console.log(track);
     spotifyWebApi
-      .addTracksToPlaylist(playlistId, track.song_uri)
+      .addTracksToPlaylist(this.props.currentPlaylistId, track.song_uri)
       .then(data => {
         console.log("Data returned from songs from spotify", data);
       })
       .then(DataManager.postSong(track));
-    alert(`${track.songName} has been added to ${playlistName}`);
+    alert(`${track.songName} has been added to ${this.props.playlistName}`);
   };
 
   //2. collect song id and song uri add to queued array for playlist and database with a post fetch
   //3. display songs that were added to playlist to the table and display track, artist, album
 
   render() {
+    console.log("search", this.props.currentPlaylistId);
     return (
       <div className="searchCard">
         <Card className="songCard">

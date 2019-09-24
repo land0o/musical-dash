@@ -13,11 +13,11 @@ import CreatedPlaylistCard from "./CreatedPlaylistCard";
 import PlaylistSongCard from "./PlaylistSongCard";
 // import EditPlaylistForm from "./EditPlaylistForm";
 import Spotify from "spotify-web-api-js";
+import SearchField from "../search/SearchField";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
-const userId = localStorage.getItem("spotifyId");
-// const playlistId = localStorage.getItem("playlistId");
+const userId = sessionStorage.getItem("spotifyId");
 
 //4. will need a button to save playlist to database and to users spotify
 //5. a end playlist btn?
@@ -30,11 +30,12 @@ class PlaylistHome extends Component {
     super(props);
     this.state = {
       cSelected: [],
-      userId: localStorage.getItem("spotifyId"),
+      userId: sessionStorage.getItem("spotifyId"),
       playlistName: "",
+      currentPlaylistId: "",
+      playlistId: "",
       playlistDesc: "",
       playlists: [],
-      PlaylistId: localStorage.getItem("playlistId"),
       title: "",
       description: "",
       editedPlaylist: false
@@ -72,10 +73,10 @@ class PlaylistHome extends Component {
       })
       .then(playlistResponse => {
         console.log("newPlaylist response", playlistResponse);
-        localStorage.setItem("currentPlaylistId", playlistResponse.id);
-        localStorage.setItem("currentPlaylistName", this.state.playlistName);
+        this.setState({ currentPlaylistId: playlistResponse.id });
+        // sessionStorage.setItem("PlaylistId", this.id);
         const playlistObj = {
-          spotifyId: playlistResponse.id,
+          spotifyId: this.state.currentPlaylistId,
           title: this.state.playlistName,
           description: this.state.playlistDesc
         };
@@ -84,6 +85,9 @@ class PlaylistHome extends Component {
       })
       .then(playlistObj =>
         DataManager.postPlaylist(playlistObj)
+          .then(obj => {
+            this.setState({ playlistId: obj.id }, console.log("state", obj));
+          })
           .then(() => this.grabPlaylist())
           .then(() => {
             alert(`Playlist ${this.state.playlistName} has been created!`);
@@ -93,8 +97,6 @@ class PlaylistHome extends Component {
   //edits the dom spotify and my database.
   editPlaylist = (playlist, playlistId) => {
     console.log(playlist);
-    // localStorage.setItem("editPlaylistId", playlist.spotifyId);
-    // const playlistId = localStorage.getItem("editPlaylistId");
     console.log(playlistId);
     DataManager.editPlaylist(playlist, playlist.id)
       .then(() => this.grabPlaylist())
@@ -107,7 +109,7 @@ class PlaylistHome extends Component {
   };
 
   deletePlaylist = (id, playlistId) => {
-    DataManager.deletePlaylist(id)
+    DataManager.deletePlaylist(this.state.playlistId)
       .then(spotifyWebApi.unfollowPlaylist(playlistId))
       .then(() => this.grabPlaylist());
     alert("Playlist has been deleted");
@@ -117,19 +119,21 @@ class PlaylistHome extends Component {
   addPlaylistInfo = evt => {
     evt.preventDefault();
     this.getNewPlaylist();
-    console.log(this.state.PlaylistName);
+    console.log(this.state.playlistName);
     console.log(userId);
   };
   //will add playlist to storage or state for mod
   addCurrentPlaylistToStorage = (PlaylistObj, playlistId) => {
-    localStorage.setItem("currentPlaylistId", playlistId);
-    localStorage.setItem("currentPlaylistName", PlaylistObj.title);
-    localStorage.setItem("PlaylistId", PlaylistObj.id);
-    const currentPlaylistName1 = localStorage.getItem("currentPlaylistName");
-    const playlistIdNum = localStorage.getItem("PlaylistId");
+    this.setState({
+      playlistId: PlaylistObj.id,
+      playlistName: PlaylistObj.title,
+      currentPlaylistId: playlistId
+    });
+    // sessionStorage.setItem("currentPlaylistId", playlistId);
+    // sessionStorage.setItem("currentPlaylistName", PlaylistObj.title);
+    // const currentPlaylistName1 = sessionStorage.getItem("currentPlaylistName");
+    // const playlistIdNum = sessionStorage.getItem("PlaylistId");
     console.log(playlistId);
-    console.log(playlistIdNum);
-    console.log(currentPlaylistName1);
   };
 
   //not using yet but will be for toggling play functions
@@ -139,116 +143,128 @@ class PlaylistHome extends Component {
 
   render() {
     // this.editPlaylistInfo()
+    // console.log(this.state);
     return (
-      <div className="playlistContainer">
-        <Card className="playlistCard">
-          <CardBody>
-            <CardTitle>Create A PlayList</CardTitle>
-            <hr />
-            <CardSubtitle className="playlistForm">
-              <Form inline>
-                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Input
-                    className="playlistInput"
-                    id="playlistName"
-                    onChange={this.handleSubmit}
-                    placeholder="Playlist Name"
-                    value={this.state.playlistName}
-                  />
-                </FormGroup>
-                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Input
-                    className="playlistInput"
-                    id="playlistDesc"
-                    onChange={this.handleSubmit}
-                    placeholder="Short Description"
-                    value={this.state.playlistDesc}
-                  />
-                </FormGroup>
+      <div>
+        <div className="playlistContainer">
+          <Card className="playlistCard">
+            <CardBody>
+              <CardTitle>Create A PlayList</CardTitle>
+              <hr />
+              <CardSubtitle className="playlistForm">
+                <Form inline>
+                  <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Input
+                      className="playlistInput"
+                      id="playlistName"
+                      onChange={this.handleSubmit}
+                      placeholder="Playlist Name"
+                      value={this.state.playlistName}
+                    />
+                  </FormGroup>
+                  <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Input
+                      className="playlistInput"
+                      id="playlistDesc"
+                      onChange={this.handleSubmit}
+                      placeholder="Short Description"
+                      value={this.state.playlistDesc}
+                    />
+                  </FormGroup>
+                  <Button
+                    className="playlistBtn"
+                    onClick={this.addPlaylistInfo}
+                    outline
+                    color="info"
+                  >
+                    Add
+                  </Button>
+                </Form>
+              </CardSubtitle>
+              <CardSubtitle>
+                Playlist Name: {this.state.playlistName}
+              </CardSubtitle>
+              <CardSubtitle>{this.state.playlistDesc}</CardSubtitle>
+            </CardBody>
+            <div>
+              <ButtonGroup>
                 <Button
-                  className="playlistBtn"
-                  onClick={this.addPlaylistInfo}
                   outline
                   color="info"
+                  onClick={() => this.onRadioBtnClick(1)}
+                  active={this.state.rSelected === 1}
                 >
-                  Add
+                  back
                 </Button>
-              </Form>
-            </CardSubtitle>
-            <CardSubtitle>
-              Playlist Name: {this.state.playlistName}
-            </CardSubtitle>
-            <CardSubtitle>{this.state.playlistDesc}</CardSubtitle>
-          </CardBody>
-          <div>
-            <ButtonGroup>
-              <Button
-                outline
-                color="info"
-                onClick={() => this.onRadioBtnClick(1)}
-                active={this.state.rSelected === 1}
-              >
-                back
-              </Button>
-              <Button
-                outline
-                color="info"
-                onClick={() => this.onRadioBtnClick(2)}
-                active={this.state.rSelected === 2}
-              >
-                play/pause
-              </Button>
-              <Button
-                outline
-                color="info"
-                onClick={() => this.onRadioBtnClick(3)}
-                active={this.state.rSelected === 3}
-              >
-                skip
-              </Button>
-            </ButtonGroup>
-            <p>Selected: {this.state.rSelected}</p>
-          </div>
-          <CardBody className="playlistTable">
-            <Table dark className="playlistSelector">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Artist</th>
-                  <th>Album</th>
-                </tr>
-              </thead>
-              <tbody>
-                <PlaylistSongCard/>
-              </tbody>
-            </Table>
-          </CardBody>
-        </Card>
-        <div className="UserPlaylists">
-          <Card>
-            <CardHeader>Playlist Created By MusicalDash</CardHeader>
-            <CardBody className="playlistCards">
-              <CardTitle>User created playlist</CardTitle>
-              <div>
-                {this.state.playlists.map((playlist, i) => (
-                  <div key={i}>
-                    <CreatedPlaylistCard
-                      editPlaylist={this.editPlaylist}
-                      deletePlaylist={this.deletePlaylist}
-                      playlist={playlist}
-                      addCurrentPlaylistToStorage={
-                        this.addCurrentPlaylistToStorage
-                      }
-                    />
-                    {/* <EditPlaylistForm
+                <Button
+                  outline
+                  color="info"
+                  onClick={() => this.onRadioBtnClick(2)}
+                  active={this.state.rSelected === 2}
+                >
+                  play/pause
+                </Button>
+                <Button
+                  outline
+                  color="info"
+                  onClick={() => this.onRadioBtnClick(3)}
+                  active={this.state.rSelected === 3}
+                >
+                  skip
+                </Button>
+              </ButtonGroup>
+              <p>Selected: {this.state.rSelected}</p>
+            </div>
+            <CardBody className="playlistTable">
+              <Table dark className="playlistSelector">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <PlaylistSongCard />
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>
+          <div className="UserPlaylists">
+            <Card>
+              <CardHeader>Playlist Created By MusicalDash</CardHeader>
+              <CardBody className="playlistCards">
+                <CardTitle>User created playlist</CardTitle>
+                <div>
+                  {this.state.playlists.map((playlist, i) => (
+                    <div key={i}>
+                      <CreatedPlaylistCard
+                        editPlaylist={this.editPlaylist}
+                        deletePlaylist={this.deletePlaylist}
+                        playlist={playlist}
+                        playlistName={this.state.playlistName}
+                        addCurrentPlaylistToStorage={
+                          this.addCurrentPlaylistToStorage
+                        }
+                      />
+                      {/* <EditPlaylistForm
                       editPlaylist={this.editPlaylist}
                       playlist={playlist}
                     /> */}
-                  </div>
-                ))}
-              </div>
-            </CardBody>
-          </Card>
+                    </div>
+                  ))}
+                </div>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+        <div>
+          <SearchField
+            playlistId={this.state.playlistId}
+            currentPlaylistId={this.state.currentPlaylistId}
+            playlistName={this.state.playlistName}
+            {...this.props}
+          />
         </div>
       </div>
     );

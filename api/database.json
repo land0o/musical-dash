@@ -33,18 +33,6 @@
       "title": "ErynNKit",
       "description": "Chili mix",
       "id": 5
-    },
-    {
-      "spotifyId": "63U2qDSMUcPq8UaPoczfzj",
-      "title": "AppTest1",
-      "description": "testing Alert",
-      "id": 6
-    },
-    {
-      "spotifyId": "5tOGcGSxs9YBzPQhtgPe0Z",
-      "title": "AppTest2",
-      "description": "testing",
-      "id": 7
     }
   ],
   "songsAddedToPlaylist": [
@@ -307,6 +295,66 @@
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
       "id": 32
+    },
+    {
+      "songName": "TEST DRIVE",
+      "albumName": "BALLADS 1",
+      "artistName": "Joji",
+      "song_uri": ["spotify:track:1DMEzmAoQIikcL52psptQL"],
+      "song_id": "1DMEzmAoQIikcL52psptQL",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 33
+    },
+    {
+      "songName": "Hot (feat. Gunna)",
+      "albumName": "So Much Fun",
+      "artistName": "Young Thug",
+      "song_uri": ["spotify:track:5Z8HZM6iQMhhqyPcCGY5g9"],
+      "song_id": "5Z8HZM6iQMhhqyPcCGY5g9",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 41
+    },
+    {
+      "songName": "Go Loko",
+      "albumName": "Go Loko",
+      "artistName": "YG",
+      "song_uri": ["spotify:track:3SZqA7rQvROJsCbUu2v0xa"],
+      "song_id": "3SZqA7rQvROJsCbUu2v0xa",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 42
+    },
+    {
+      "songName": "bad guy",
+      "albumName": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      "artistName": "Billie Eilish",
+      "song_uri": ["spotify:track:2Fxmhks0bxGSBdJ92vM42m"],
+      "song_id": "2Fxmhks0bxGSBdJ92vM42m",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 43
+    },
+    {
+      "songName": "Je veux tes yeux",
+      "albumName": "Brol",
+      "artistName": "Angèle",
+      "song_uri": ["spotify:track:1ZV4ZCUVOwt5gSnWoQEnY2"],
+      "song_id": "1ZV4ZCUVOwt5gSnWoQEnY2",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 44
+    },
+    {
+      "songName": "Under The Sun (with J. Cole & Lute feat. DaBaby)",
+      "albumName": "Revenge Of The Dreamers III",
+      "artistName": "Dreamville",
+      "song_uri": ["spotify:track:6MF4tRr5lU8qok8IKaFOBE"],
+      "song_id": "6MF4tRr5lU8qok8IKaFOBE",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 46
     }
   ],
   "sessionPlaylist": [

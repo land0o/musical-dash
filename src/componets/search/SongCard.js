@@ -12,9 +12,9 @@ export class SongCard extends Component {
   // };
 
   addSongToPlaylist = event => {
-    const playlistId = localStorage.getItem("currentPlaylistId")
-    const playlistName = localStorage.getItem("currentPlaylistName")
-    const currentPlaylistId = localStorage.getItem("PlaylistId");
+    console.log("props", this.props);
+    const playlistId = sessionStorage.getItem("currentPlaylistId")
+    const currentPlaylistId = sessionStorage.getItem("PlaylistId");
     const songInfo = {
       songName: this.props.track.name,
       albumName: this.props.track.album.name,
@@ -22,8 +22,7 @@ export class SongCard extends Component {
       song_uri: [this.props.track.uri],
       song_id: this.props.track.id,
       spotifyPlaylistId: playlistId,
-      playlistId: parseInt(currentPlaylistId),
-      playlistName: playlistName
+      playlistId: this.props.playlistId,
     };
     this.props.addSongToSpotify(songInfo);
     console.log(songInfo);

@@ -74,8 +74,9 @@ class CurrentTrack extends Component {
         };
         // console.log("spotify response", response);
         // console.log(newUser);
-        localStorage.setItem("spotifyId", response.id);
-        localStorage.setItem("SpotifyEmail", response.email);
+        this.setState({spotifyId: response.id})
+        sessionStorage.setItem("spotifyId", response.id);
+        sessionStorage.setItem("SpotifyEmail", response.email);
         this.setState({ newUser: newUser });
         return response;
       })
@@ -128,11 +129,12 @@ class CurrentTrack extends Component {
           </button>
         </div>
         <div>
-          <PlaylistHome {...this.props} />
+      
+          <PlaylistHome spotifyId={this.state.spotifyId}  {...this.props} />
         </div>
-        <div>
+        {/* <div>
           <SearchField {...this.props} />
-        </div>
+        </div> */}
       </div>
     );
   }
