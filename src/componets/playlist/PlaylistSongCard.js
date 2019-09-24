@@ -1,16 +1,21 @@
 import React, { Component } from "react";
+import { Button } from "reactstrap";
 
 class PlaylistSongCard extends Component {
   render() {
     return (
-      <div>
+        <React.Fragment>
         <tr>
-          <th scope="row">1</th>
           <td>Millionaire</td>
           <td>Chris Stapleton</td>
           <td>From A Room Volume 2</td>
+          <td>
+            <Button size="sm" color="info">
+              x
+            </Button>
+          </td>
         </tr>
-      </div>
+        </React.Fragment>
     );
   }
 }
