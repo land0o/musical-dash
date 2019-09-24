@@ -10,6 +10,7 @@ import {
 import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
 import CreatedPlaylistCard from "./CreatedPlaylistCard";
+import PlaylistSongCard from "./PlaylistSongCard";
 // import EditPlaylistForm from "./EditPlaylistForm";
 import Spotify from "spotify-web-api-js";
 import DataManager from "../DataManager";
@@ -81,11 +82,13 @@ class PlaylistHome extends Component {
         console.log(playlistObj);
         return playlistObj;
       })
-      .then(playlistObj => {
-        DataManager.postPlaylist(playlistObj);
-      })
-      .then(() => this.grabPlaylist());
-    alert(`Playlist ${this.state.playlistName} has been created!`);
+      .then(playlistObj =>
+        DataManager.postPlaylist(playlistObj)
+          .then(() => this.grabPlaylist())
+          .then(() => {
+            alert(`Playlist ${this.state.playlistName} has been created!`);
+          })
+      );
   }
   //edits the dom spotify and my database.
   editPlaylist = (playlist, playlistId) => {
@@ -107,7 +110,7 @@ class PlaylistHome extends Component {
     DataManager.deletePlaylist(id)
       .then(spotifyWebApi.unfollowPlaylist(playlistId))
       .then(() => this.grabPlaylist());
-      alert("Playlist has been deleted")
+    alert("Playlist has been deleted");
   };
 
   //handles the submission of the playlist
@@ -117,6 +120,18 @@ class PlaylistHome extends Component {
     console.log(this.state.PlaylistName);
     console.log(userId);
   };
+  //will add playlist to storage or state for mod
+  addCurrentPlaylistToStorage = (PlaylistObj, playlistId) => {
+    localStorage.setItem("currentPlaylistId", playlistId);
+    localStorage.setItem("currentPlaylistName", PlaylistObj.title);
+    localStorage.setItem("PlaylistId", PlaylistObj.id);
+    const currentPlaylistName1 = localStorage.getItem("currentPlaylistName");
+    const playlistIdNum = localStorage.getItem("PlaylistId");
+    console.log(playlistId);
+    console.log(playlistIdNum);
+    console.log(currentPlaylistName1);
+  };
+
   //not using yet but will be for toggling play functions
   onRadioBtnClick(rSelected) {
     this.setState({ rSelected });
@@ -198,31 +213,13 @@ class PlaylistHome extends Component {
             <Table dark className="playlistSelector">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Title</th>
                   <th>Artist</th>
                   <th>Album</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Millionaire</td>
-                  <td>Chris Stapleton</td>
-                  <td>From A Room Volume 2</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Scenes from an Italian Restaurant</td>
-                  <td>Billy Joel</td>
-                  <td>The Stranger</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Exactly</td>
-                  <td>EarthGang</td>
-                  <td>Shalow Graves For Toys</td>
-                </tr>
+                <PlaylistSongCard/>
               </tbody>
             </Table>
           </CardBody>
@@ -239,6 +236,9 @@ class PlaylistHome extends Component {
                       editPlaylist={this.editPlaylist}
                       deletePlaylist={this.deletePlaylist}
                       playlist={playlist}
+                      addCurrentPlaylistToStorage={
+                        this.addCurrentPlaylistToStorage
+                      }
                     />
                     {/* <EditPlaylistForm
                       editPlaylist={this.editPlaylist}

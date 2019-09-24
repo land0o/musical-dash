@@ -19,7 +19,7 @@
     {
       "spotifyId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "title": "AppTest",
-      "description": "lets see if it works on all 3",
+      "description": "testing edit",
       "id": 1
     },
     {
@@ -29,16 +29,22 @@
       "id": 2
     },
     {
-      "spotifyId": "4u4fr4cvU3crHlpsrTftd6",
-      "title": "Demo",
-      "description": "playlist with songs",
-      "id": 4
-    },
-    {
       "spotifyId": "7wxgYsSGtdHvl3DLCk3EOz",
       "title": "ErynNKit",
       "description": "Chili mix",
       "id": 5
+    },
+    {
+      "spotifyId": "63U2qDSMUcPq8UaPoczfzj",
+      "title": "AppTest1",
+      "description": "testing Alert",
+      "id": 6
+    },
+    {
+      "spotifyId": "5tOGcGSxs9YBzPQhtgPe0Z",
+      "title": "AppTest2",
+      "description": "testing",
+      "id": 7
     }
   ],
   "songsAddedToPlaylist": [
@@ -53,31 +59,13 @@
       "song_id": "2rhFaau65TFMv4mACtE9it"
     },
     {
-      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
-      "playlistId": 1,
-      "songName": "Scenes from an Italian Restaurant",
-      "albumName": "The Stranger",
-      "artistName": "Billy Joel",
-      "song_uri": "spotify:track:3utq2FgD1pkmIoaWfjXWAU",
-      "song_id": "3utq2FgD1pkmIoaWfjXWAU",
-      "id": 2
-    },
-    {
-      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
-      "playlistId": 1,
-      "songName": "Exactly",
-      "albumName": "Shalow Graves For Toys",
-      "artistName": "EarthGang",
-      "song_uri": "spotify:track:0SzSJWuWeYnDBIPYuNCJ28",
-      "song_id": "0SzSJWuWeYnDBIPYuNCJ28",
-      "id": 3
-    },
-    {
       "songName": "No Problem (feat. Lil Wayne & 2 Chainz)",
       "albumName": "Coloring Book",
       "artistName": "Chance the Rapper",
       "song_uri": ["spotify:track:0v9Wz8o0BT8DU38R4ddjeH"],
       "song_id": "0v9Wz8o0BT8DU38R4ddjeH",
+      "playlistId": 5,
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistName": "ErynNKit",
       "id": 8
     },
@@ -143,6 +131,7 @@
       "song_uri": ["spotify:track:6V1bu6o1Yo5ZXnsCJU8Ovk"],
       "song_id": "6V1bu6o1Yo5ZXnsCJU8Ovk",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 14
     },
@@ -153,6 +142,7 @@
       "song_uri": ["spotify:track:2GGMabyHXnJmjY6CXhhB2e"],
       "song_id": "2GGMabyHXnJmjY6CXhhB2e",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 15
     },
@@ -163,6 +153,7 @@
       "song_uri": ["spotify:track:6KBYefIoo7KydImq1uUQlL"],
       "song_id": "6KBYefIoo7KydImq1uUQlL",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 16
     },
@@ -173,6 +164,7 @@
       "song_uri": ["spotify:track:7Ffgp7DIow5wECYQyzEiTq"],
       "song_id": "7Ffgp7DIow5wECYQyzEiTq",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 17
     },
@@ -183,6 +175,7 @@
       "song_uri": ["spotify:track:4ZSQS1o7qYAXJa5I37lk5x"],
       "song_id": "4ZSQS1o7qYAXJa5I37lk5x",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 18
     },
@@ -193,6 +186,7 @@
       "song_uri": ["spotify:track:2G7V7zsVDxg1yRsu7Ew9RJ"],
       "song_id": "2G7V7zsVDxg1yRsu7Ew9RJ",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 19
     },
@@ -203,6 +197,7 @@
       "song_uri": ["spotify:track:2lMg3lCMOGistaWBNGjuT3"],
       "song_id": "2lMg3lCMOGistaWBNGjuT3",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 20
     },
@@ -213,8 +208,141 @@
       "song_uri": ["spotify:track:5EOoMWIB9iK4ZpcSex9Ec7"],
       "song_id": "5EOoMWIB9iK4ZpcSex9Ec7",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
       "playlistName": "ErynNKit",
       "id": 21
+    },
+    {
+      "songName": "Burn Rubber On Me (Why You Wanna Hurt Me)",
+      "albumName": "Greatest Hits",
+      "artistName": "The Gap Band",
+      "song_uri": ["spotify:track:32YzjV133gteg9LMBGO2OA"],
+      "song_id": "32YzjV133gteg9LMBGO2OA",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "playlistName": "AppTest",
+      "id": 22
+    },
+    {
+      "songName": "Hello",
+      "albumName": "25",
+      "artistName": "Adele",
+      "song_uri": ["spotify:track:4sPmO7WMQUAf45kwMOtONw"],
+      "song_id": "4sPmO7WMQUAf45kwMOtONw",
+      "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
+      "playlistId": 2,
+      "playlistName": "Playlist Test",
+      "id": 23
+    },
+    {
+      "songName": "Hello",
+      "albumName": "2014 Forest Hills Drive",
+      "artistName": "J. Cole",
+      "song_uri": ["spotify:track:30Chv2SmIry70YwtmtaKnj"],
+      "song_id": "30Chv2SmIry70YwtmtaKnj",
+      "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
+      "playlistId": 2,
+      "playlistName": "Playlist Test",
+      "id": 24
+    },
+    {
+      "songName": "Hello",
+      "albumName": "2014 Forest Hills Drive",
+      "artistName": "J. Cole",
+      "song_uri": ["spotify:track:30Chv2SmIry70YwtmtaKnj"],
+      "song_id": "30Chv2SmIry70YwtmtaKnj",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
+      "playlistName": "ErynNKit",
+      "id": 25
+    },
+    {
+      "songName": "Ready or Not",
+      "albumName": "Hello My Name Is...",
+      "artistName": "Bridgit Mendler",
+      "song_uri": ["spotify:track:5xvUgoVED1F4mBu8FL0HaW"],
+      "song_id": "5xvUgoVED1F4mBu8FL0HaW",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "playlistName": "AppTest",
+      "id": 26
+    },
+    {
+      "songName": "Love song",
+      "albumName": "Norman Fucking Rockwell!",
+      "artistName": "Lana Del Rey",
+      "song_uri": ["spotify:track:5tyMJlMqaggzvuX7TtlrTe"],
+      "song_id": "5tyMJlMqaggzvuX7TtlrTe",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "playlistName": "AppTest",
+      "id": 27
+    },
+    {
+      "songName": "Next Song",
+      "albumName": "Blank Blank",
+      "artistName": "DaBaby",
+      "song_uri": ["spotify:track:0rrVn0KMlLHtAklzUrrfoj"],
+      "song_id": "0rrVn0KMlLHtAklzUrrfoj",
+      "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
+      "playlistId": 2,
+      "playlistName": "Playlist Test",
+      "id": 28
+    },
+    {
+      "songName": "Next Song",
+      "albumName": "Blank Blank",
+      "artistName": "DaBaby",
+      "song_uri": ["spotify:track:0rrVn0KMlLHtAklzUrrfoj"],
+      "song_id": "0rrVn0KMlLHtAklzUrrfoj",
+      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
+      "playlistId": 5,
+      "playlistName": "ErynNKit",
+      "id": 29
+    },
+    {
+      "songName": "Pure Water (with Migos)",
+      "albumName": "Perfect Ten",
+      "artistName": "Mustard",
+      "song_uri": ["spotify:track:3j84U36KvLeXNDPv4t5pI8"],
+      "song_id": "3j84U36KvLeXNDPv4t5pI8",
+      "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
+      "playlistId": 2,
+      "playlistName": "Playlist Test",
+      "id": 30
+    },
+    {
+      "songName": "Windshield",
+      "albumName": "If Sorrows Swim",
+      "artistName": "Greensky Bluegrass",
+      "song_uri": ["spotify:track:7GI1Weh21oGJYeSbrtOyR1"],
+      "song_id": "7GI1Weh21oGJYeSbrtOyR1",
+      "spotifyPlaylistId": "304hI5ej5i5Yoa9w8BvTtl",
+      "playlistId": 2,
+      "playlistName": "Andy's",
+      "id": 31
+    },
+    {
+      "songName": "Rumor (Bryan Todd Remix)",
+      "albumName": "Rumor (Remixes)",
+      "artistName": "Lee Brice",
+      "song_uri": ["spotify:track:1nBJxJ5aI1jWjcw731YwHe"],
+      "song_id": "1nBJxJ5aI1jWjcw731YwHe",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "playlistName": "AppTest",
+      "id": 32
+    },
+    {
+      "songName": "I Saw the Light",
+      "albumName": "Something/Anything?",
+      "artistName": "Todd Rundgren",
+      "song_uri": ["spotify:track:0B1zVsLqmV9ibIFdNS5tGs"],
+      "song_id": "0B1zVsLqmV9ibIFdNS5tGs",
+      "spotifyPlaylistId": null,
+      "playlistId": null,
+      "playlistName": null,
+      "id": 33
     }
   ],
   "sessionPlaylist": [

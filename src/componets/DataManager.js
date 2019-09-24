@@ -7,8 +7,8 @@ export default {
       response.json()
     );
   },
-  getAllSongs() {
-    return fetch(`${remoteURL}/songsAddedToPlaylist`).then(response => response.json());
+  getAllSongs(id) {
+    return fetch(`${remoteURL}/songsAddedToPlaylist?playlistId=${id}`).then(response => response.json());
   },
   getAllPlaylists() {
     return fetch(`${remoteURL}/playlists`).then(response => response.json());
