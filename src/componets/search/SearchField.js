@@ -39,7 +39,7 @@ class SearchField extends Component {
       console.log(this.state.tracks);
     });
   };
-
+//setInterval
   //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
     console.log("track going into spotify post", track.song_uri);

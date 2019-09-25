@@ -163,9 +163,9 @@ class PlaylistHome extends Component {
     console.log(PlaylistObj);
     console.log(this.state);
   };
-  removeSongs = (event) => {
-    console.log(event);
-  }
+  removeSongs = id => {
+    console.log(id);
+  };
 
   //not using yet but will be for toggling play functions
   onRadioBtnClick(rSelected) {
