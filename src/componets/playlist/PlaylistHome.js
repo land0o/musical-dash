@@ -36,6 +36,7 @@ class PlaylistHome extends Component {
       playlistId: "",
       playlistDesc: "",
       playlists: [],
+      playlistSong: [],
       title: "",
       description: "",
       editedPlaylist: false
@@ -45,8 +46,27 @@ class PlaylistHome extends Component {
   //renders playlist to created playlist card
   componentDidMount() {
     this.grabPlaylist();
+    this.grabSongs();
   }
   //function that grabs playlist from database
+  grabPlaylist = () => {
+    DataManager.getAllPlaylists().then(playlistResponse => {
+      console.log(playlistResponse);
+      this.setState({
+        playlists: playlistResponse
+      });
+      console.log(this.state.playlists);
+    });
+  };
+  grabSongs = () => {
+    DataManager.getAllSongs(this.state.playlistId).then(songResponse => {
+      console.log(songResponse);
+      this.setState({
+        playlistSong: songResponse
+      });
+      console.log(this.state.playlistSong);
+    });
+  };
   grabPlaylist = () => {
     DataManager.getAllPlaylists().then(playlistResponse => {
       console.log(playlistResponse);
@@ -143,6 +163,7 @@ class PlaylistHome extends Component {
 
   render() {
     // this.editPlaylistInfo()
+    // this.grabSongs();  
     // console.log(this.state);
     return (
       <div>
