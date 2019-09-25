@@ -14,7 +14,7 @@ export class SongCard extends Component {
   addSongToPlaylist = event => {
     console.log("props", this.props);
     const playlistId = sessionStorage.getItem("currentPlaylistId")
-    const currentPlaylistId = sessionStorage.getItem("PlaylistId");
+    // const currentPlaylistId = sessionStorage.getItem("PlaylistId");
     const songInfo = {
       songName: this.props.track.name,
       albumName: this.props.track.album.name,

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
-import SearchField from "../search/SearchField";
+// import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
 import DataManager from "../DataManager";
 

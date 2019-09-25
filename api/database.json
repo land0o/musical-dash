@@ -355,6 +355,16 @@
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
       "id": 46
+    },
+    {
+      "songName": "RNP (feat. Anderson .Paak)",
+      "albumName": "The Lost Boy",
+      "artistName": "YBN Cordae",
+      "song_uri": ["spotify:track:5lw8Mgb4LyhriPIC86gV6e"],
+      "song_id": "5lw8Mgb4LyhriPIC86gV6e",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 47
     }
   ],
   "sessionPlaylist": [
