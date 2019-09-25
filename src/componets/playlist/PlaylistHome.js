@@ -36,7 +36,7 @@ class PlaylistHome extends Component {
       playlistId: "",
       playlistDesc: "",
       playlists: [],
-      playlistSong: [],
+      playlistSongs: [],
       title: "",
       description: "",
       editedPlaylist: false
@@ -58,13 +58,15 @@ class PlaylistHome extends Component {
       console.log(this.state.playlists);
     });
   };
+  //start here ask jenna whats missing? im passing the id from state so wtf r my songs??
   grabSongs = () => {
     DataManager.getAllSongs(this.state.playlistId).then(songResponse => {
-      console.log(songResponse);
+      console.log("Songs in response", songResponse);
       this.setState({
-        playlistSong: songResponse
+        playlistSongs: songResponse
       });
-      console.log(this.state.playlistSong);
+      console.log("Songs in current playlist", this.state.playlistSongs);
+      console.log(this.state);
     });
   };
   grabPlaylist = () => {
@@ -144,17 +146,26 @@ class PlaylistHome extends Component {
   };
   //will add playlist to storage or state for mod
   addCurrentPlaylistToStorage = (PlaylistObj, playlistId) => {
-    this.setState({
-      playlistId: PlaylistObj.id,
-      playlistName: PlaylistObj.title,
-      currentPlaylistId: playlistId
-    });
+    this.setState(
+      {
+        playlistId: PlaylistObj.id,
+        playlistName: PlaylistObj.title,
+        currentPlaylistId: playlistId,
+        playlistDesc: PlaylistObj.description
+      },
+      this.grabSongs
+    );
     // sessionStorage.setItem("currentPlaylistId", playlistId);
     // sessionStorage.setItem("currentPlaylistName", PlaylistObj.title);
     // const currentPlaylistName1 = sessionStorage.getItem("currentPlaylistName");
     // const playlistIdNum = sessionStorage.getItem("PlaylistId");
     console.log(playlistId);
+    console.log(PlaylistObj);
+    console.log(this.state);
   };
+  removeSongs = (event) => {
+    console.log(event);
+  }
 
   //not using yet but will be for toggling play functions
   onRadioBtnClick(rSelected) {
@@ -162,9 +173,6 @@ class PlaylistHome extends Component {
   }
 
   render() {
-    // this.editPlaylistInfo()
-    // this.grabSongs();  
-    // console.log(this.state);
     return (
       <div>
         <div className="playlistContainer">
@@ -246,7 +254,15 @@ class PlaylistHome extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <PlaylistSongCard />
+                  {this.state.playlistSongs.map((playlistSong, i) => (
+                    <tr key={i}>
+                      <PlaylistSongCard
+                        {...this.props}
+                        removeSongs={this.removeSongs}
+                        playlistSong={playlistSong}
+                      />
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             </CardBody>

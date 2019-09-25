@@ -13,6 +13,7 @@ class CreatedPlaylistCard extends Component {
     const PlaylistObj = {
       id: this.props.playlist.id,
       title: this.props.playlist.title,
+      description: this.props.playlist.description
     };
     this.props.addCurrentPlaylistToStorage(PlaylistObj, playlistId);
   };
