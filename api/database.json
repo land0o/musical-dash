@@ -33,18 +33,6 @@
       "title": "ErynNKit",
       "description": "Chili mix",
       "id": 5
-    },
-    {
-      "spotifyId": "63U2qDSMUcPq8UaPoczfzj",
-      "title": "AppTest1",
-      "description": "testing Alert",
-      "id": 6
-    },
-    {
-      "spotifyId": "5tOGcGSxs9YBzPQhtgPe0Z",
-      "title": "AppTest2",
-      "description": "testing",
-      "id": 7
     }
   ],
   "songsAddedToPlaylist": [
@@ -66,7 +54,6 @@
       "song_id": "0v9Wz8o0BT8DU38R4ddjeH",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistName": "ErynNKit",
       "id": 8
     },
     {
@@ -77,7 +64,6 @@
       "song_id": "4QbVWCAkh9Z1G041cQAiZ9",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistName": "ErynNKit",
       "id": 9
     },
     {
@@ -88,7 +74,6 @@
       "song_id": "2rkVoKVEMuct8SmEIGKzBw",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistName": "ErynNKit",
       "id": 10
     },
     {
@@ -99,7 +84,6 @@
       "song_id": "6Xo9osN1HErsEJoqwj4eDg",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistName": "ErynNKit",
       "id": 11
     },
     {
@@ -110,7 +94,6 @@
       "song_id": "71WmhNFdGurCrFbyDyYe1C",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistName": "ErynNKit",
       "id": 12
     },
     {
@@ -121,7 +104,6 @@
       "song_id": "71WmhNFdGurCrFbyDyYe1C",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistName": "ErynNKit",
       "id": 13
     },
     {
@@ -132,7 +114,6 @@
       "song_id": "6V1bu6o1Yo5ZXnsCJU8Ovk",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 14
     },
     {
@@ -143,7 +124,6 @@
       "song_id": "2GGMabyHXnJmjY6CXhhB2e",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 15
     },
     {
@@ -154,7 +134,6 @@
       "song_id": "6KBYefIoo7KydImq1uUQlL",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 16
     },
     {
@@ -165,7 +144,6 @@
       "song_id": "7Ffgp7DIow5wECYQyzEiTq",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 17
     },
     {
@@ -176,7 +154,6 @@
       "song_id": "4ZSQS1o7qYAXJa5I37lk5x",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 18
     },
     {
@@ -187,7 +164,6 @@
       "song_id": "2G7V7zsVDxg1yRsu7Ew9RJ",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 19
     },
     {
@@ -198,7 +174,6 @@
       "song_id": "2lMg3lCMOGistaWBNGjuT3",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 20
     },
     {
@@ -209,7 +184,6 @@
       "song_id": "5EOoMWIB9iK4ZpcSex9Ec7",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 21
     },
     {
@@ -220,7 +194,6 @@
       "song_id": "32YzjV133gteg9LMBGO2OA",
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
-      "playlistName": "AppTest",
       "id": 22
     },
     {
@@ -231,7 +204,6 @@
       "song_id": "4sPmO7WMQUAf45kwMOtONw",
       "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
       "playlistId": 2,
-      "playlistName": "Playlist Test",
       "id": 23
     },
     {
@@ -242,7 +214,6 @@
       "song_id": "30Chv2SmIry70YwtmtaKnj",
       "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
       "playlistId": 2,
-      "playlistName": "Playlist Test",
       "id": 24
     },
     {
@@ -253,7 +224,6 @@
       "song_id": "30Chv2SmIry70YwtmtaKnj",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 25
     },
     {
@@ -264,7 +234,6 @@
       "song_id": "5xvUgoVED1F4mBu8FL0HaW",
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
-      "playlistName": "AppTest",
       "id": 26
     },
     {
@@ -275,7 +244,6 @@
       "song_id": "5tyMJlMqaggzvuX7TtlrTe",
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
-      "playlistName": "AppTest",
       "id": 27
     },
     {
@@ -286,7 +254,6 @@
       "song_id": "0rrVn0KMlLHtAklzUrrfoj",
       "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
       "playlistId": 2,
-      "playlistName": "Playlist Test",
       "id": 28
     },
     {
@@ -297,7 +264,6 @@
       "song_id": "0rrVn0KMlLHtAklzUrrfoj",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
-      "playlistName": "ErynNKit",
       "id": 29
     },
     {
@@ -308,7 +274,6 @@
       "song_id": "3j84U36KvLeXNDPv4t5pI8",
       "spotifyPlaylistId": "3nKeFjGKNk31II94iwsvkD",
       "playlistId": 2,
-      "playlistName": "Playlist Test",
       "id": 30
     },
     {
@@ -319,7 +284,6 @@
       "song_id": "7GI1Weh21oGJYeSbrtOyR1",
       "spotifyPlaylistId": "304hI5ej5i5Yoa9w8BvTtl",
       "playlistId": 2,
-      "playlistName": "Andy's",
       "id": 31
     },
     {
@@ -330,19 +294,77 @@
       "song_id": "1nBJxJ5aI1jWjcw731YwHe",
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
-      "playlistName": "AppTest",
       "id": 32
     },
     {
-      "songName": "I Saw the Light",
-      "albumName": "Something/Anything?",
-      "artistName": "Todd Rundgren",
-      "song_uri": ["spotify:track:0B1zVsLqmV9ibIFdNS5tGs"],
-      "song_id": "0B1zVsLqmV9ibIFdNS5tGs",
-      "spotifyPlaylistId": null,
-      "playlistId": null,
-      "playlistName": null,
+      "songName": "TEST DRIVE",
+      "albumName": "BALLADS 1",
+      "artistName": "Joji",
+      "song_uri": ["spotify:track:1DMEzmAoQIikcL52psptQL"],
+      "song_id": "1DMEzmAoQIikcL52psptQL",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
       "id": 33
+    },
+    {
+      "songName": "Hot (feat. Gunna)",
+      "albumName": "So Much Fun",
+      "artistName": "Young Thug",
+      "song_uri": ["spotify:track:5Z8HZM6iQMhhqyPcCGY5g9"],
+      "song_id": "5Z8HZM6iQMhhqyPcCGY5g9",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 41
+    },
+    {
+      "songName": "Go Loko",
+      "albumName": "Go Loko",
+      "artistName": "YG",
+      "song_uri": ["spotify:track:3SZqA7rQvROJsCbUu2v0xa"],
+      "song_id": "3SZqA7rQvROJsCbUu2v0xa",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 42
+    },
+    {
+      "songName": "bad guy",
+      "albumName": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      "artistName": "Billie Eilish",
+      "song_uri": ["spotify:track:2Fxmhks0bxGSBdJ92vM42m"],
+      "song_id": "2Fxmhks0bxGSBdJ92vM42m",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 43
+    },
+    {
+      "songName": "Je veux tes yeux",
+      "albumName": "Brol",
+      "artistName": "Angèle",
+      "song_uri": ["spotify:track:1ZV4ZCUVOwt5gSnWoQEnY2"],
+      "song_id": "1ZV4ZCUVOwt5gSnWoQEnY2",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 44
+    },
+    {
+      "songName": "Under The Sun (with J. Cole & Lute feat. DaBaby)",
+      "albumName": "Revenge Of The Dreamers III",
+      "artistName": "Dreamville",
+      "song_uri": ["spotify:track:6MF4tRr5lU8qok8IKaFOBE"],
+      "song_id": "6MF4tRr5lU8qok8IKaFOBE",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 46
+    },
+    {
+      "songName": "RNP (feat. Anderson .Paak)",
+      "albumName": "The Lost Boy",
+      "artistName": "YBN Cordae",
+      "song_uri": ["spotify:track:5lw8Mgb4LyhriPIC86gV6e"],
+      "song_id": "5lw8Mgb4LyhriPIC86gV6e",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 47
     }
   ],
   "sessionPlaylist": [
