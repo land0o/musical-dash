@@ -300,6 +300,7 @@ class PlaylistHome extends Component {
         <div>
           <SearchField
             playlistId={this.state.playlistId}
+            grabSongs={this.grabSongs}
             currentPlaylistId={this.state.currentPlaylistId}
             playlistName={this.state.playlistName}
             {...this.props}

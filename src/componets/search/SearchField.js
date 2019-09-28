@@ -51,7 +51,7 @@ class SearchField extends Component {
       .then(data => {
         console.log("Data returned from songs from spotify", data);
       })
-      .then(DataManager.postSong(track));
+      .then(DataManager.postSong(track)).then(() => this.props.grabSongs())
     alert(`${track.songName} has been added to ${this.props.playlistName}`);
   };
 
