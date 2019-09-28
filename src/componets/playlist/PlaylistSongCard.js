@@ -3,9 +3,11 @@ import { Button } from "reactstrap";
 
 class PlaylistSongCard extends Component {
   handleRemoveSong = () => {
-    // const playlistId = this.props.playlist.spotifyId;
-
-    this.props.removeSongs();
+    const removeObj = {
+      song_uri: this.props.playlistSong.song_uri,
+      id: this.props.playlistSong.id
+    };
+    this.props.removeSongs(removeObj);
   };
 
   render() {
@@ -15,13 +17,7 @@ class PlaylistSongCard extends Component {
         <td>{this.props.playlistSong.artistName}</td>
         <td>{this.props.playlistSong.albumName}</td>
         <td>
-          <Button
-            size="sm"
-            color="info"
-            onClick={() =>
-              this.props.removeSongs(this.props.playlistSong.song_uri)
-            }
-          >
+          <Button size="sm" color="info" onClick={this.handleRemoveSong}>
             x
           </Button>
         </td>

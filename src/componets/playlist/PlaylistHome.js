@@ -155,16 +155,18 @@ class PlaylistHome extends Component {
       },
       this.grabSongs
     );
-    // sessionStorage.setItem("currentPlaylistId", playlistId);
-    // sessionStorage.setItem("currentPlaylistName", PlaylistObj.title);
-    // const currentPlaylistName1 = sessionStorage.getItem("currentPlaylistName");
-    // const playlistIdNum = sessionStorage.getItem("PlaylistId");
     console.log(playlistId);
     console.log(PlaylistObj);
     console.log(this.state);
   };
-  removeSongs = id => {
-    console.log(id);
+  removeSongs = removeObj => {
+    console.log(removeObj);
+    console.log(removeObj.song_uri);
+    console.log(this.state.currentPlaylistId);
+    spotifyWebApi
+      .removeTracksFromPlaylist(this.state.currentPlaylistId, removeObj.song_uri)
+      .then(DataManager.deleteSong(removeObj.id)).then(() => this.grabSongs())
+      .then(alert(`Song has been removed from ${this.state.playlistName}`));
   };
 
   //not using yet but will be for toggling play functions
