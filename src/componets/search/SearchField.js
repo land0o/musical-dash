@@ -39,7 +39,7 @@ class SearchField extends Component {
       console.log(this.state.tracks);
     });
   };
-
+//setInterval
   //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
     console.log("track going into spotify post", track.song_uri);
@@ -51,7 +51,7 @@ class SearchField extends Component {
       .then(data => {
         console.log("Data returned from songs from spotify", data);
       })
-      .then(DataManager.postSong(track));
+      .then(DataManager.postSong(track)).then(() => this.props.grabSongs())
     alert(`${track.songName} has been added to ${this.props.playlistName}`);
   };
 

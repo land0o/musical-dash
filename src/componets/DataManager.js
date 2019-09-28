@@ -53,6 +53,11 @@ export default {
       response => response.json()
     );
   },
+  deleteSong(id) {
+    return fetch(`${remoteURL}/songsAddedToPlaylist/${id}`, { method: "DELETE" }).then(
+      response => response.json()
+    );
+  },
   editPlaylist(playlistObj, id) {
     return fetch(`${remoteURL}/playlists/${id}`, {
       method: "PATCH",

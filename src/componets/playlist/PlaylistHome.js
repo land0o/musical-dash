@@ -36,6 +36,7 @@ class PlaylistHome extends Component {
       playlistId: "",
       playlistDesc: "",
       playlists: [],
+      playlistSongs: [],
       title: "",
       description: "",
       editedPlaylist: false
@@ -45,8 +46,29 @@ class PlaylistHome extends Component {
   //renders playlist to created playlist card
   componentDidMount() {
     this.grabPlaylist();
+    this.grabSongs();
   }
   //function that grabs playlist from database
+  grabPlaylist = () => {
+    DataManager.getAllPlaylists().then(playlistResponse => {
+      console.log(playlistResponse);
+      this.setState({
+        playlists: playlistResponse
+      });
+      console.log(this.state.playlists);
+    });
+  };
+  //start here ask jenna whats missing? im passing the id from state so wtf r my songs??
+  grabSongs = () => {
+    DataManager.getAllSongs(this.state.playlistId).then(songResponse => {
+      console.log("Songs in response", songResponse);
+      this.setState({
+        playlistSongs: songResponse
+      });
+      console.log("Songs in current playlist", this.state.playlistSongs);
+      console.log(this.state);
+    });
+  };
   grabPlaylist = () => {
     DataManager.getAllPlaylists().then(playlistResponse => {
       console.log(playlistResponse);
@@ -124,16 +146,27 @@ class PlaylistHome extends Component {
   };
   //will add playlist to storage or state for mod
   addCurrentPlaylistToStorage = (PlaylistObj, playlistId) => {
-    this.setState({
-      playlistId: PlaylistObj.id,
-      playlistName: PlaylistObj.title,
-      currentPlaylistId: playlistId
-    });
-    // sessionStorage.setItem("currentPlaylistId", playlistId);
-    // sessionStorage.setItem("currentPlaylistName", PlaylistObj.title);
-    // const currentPlaylistName1 = sessionStorage.getItem("currentPlaylistName");
-    // const playlistIdNum = sessionStorage.getItem("PlaylistId");
+    this.setState(
+      {
+        playlistId: PlaylistObj.id,
+        playlistName: PlaylistObj.title,
+        currentPlaylistId: playlistId,
+        playlistDesc: PlaylistObj.description
+      },
+      this.grabSongs
+    );
     console.log(playlistId);
+    console.log(PlaylistObj);
+    console.log(this.state);
+  };
+  removeSongs = removeObj => {
+    console.log(removeObj);
+    console.log(removeObj.song_uri);
+    console.log(this.state.currentPlaylistId);
+    spotifyWebApi
+      .removeTracksFromPlaylist(this.state.currentPlaylistId, removeObj.song_uri)
+      .then(DataManager.deleteSong(removeObj.id)).then(() => this.grabSongs())
+      .then(alert(`Song has been removed from ${this.state.playlistName}`));
   };
 
   //not using yet but will be for toggling play functions
@@ -142,8 +175,6 @@ class PlaylistHome extends Component {
   }
 
   render() {
-    // this.editPlaylistInfo()
-    // console.log(this.state);
     return (
       <div>
         <div className="playlistContainer">
@@ -225,7 +256,15 @@ class PlaylistHome extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <PlaylistSongCard />
+                  {this.state.playlistSongs.map((playlistSong, i) => (
+                    <tr key={i}>
+                      <PlaylistSongCard
+                        {...this.props}
+                        removeSongs={this.removeSongs}
+                        playlistSong={playlistSong}
+                      />
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             </CardBody>
@@ -261,6 +300,7 @@ class PlaylistHome extends Component {
         <div>
           <SearchField
             playlistId={this.state.playlistId}
+            grabSongs={this.grabSongs}
             currentPlaylistId={this.state.currentPlaylistId}
             playlistName={this.state.playlistName}
             {...this.props}

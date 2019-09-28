@@ -37,16 +37,6 @@
   ],
   "songsAddedToPlaylist": [
     {
-      "id": 1,
-      "spotifyId": "6cyQei04a6QDPAmiQFWnhX",
-      "playlistId": 1,
-      "songName": "Millionaire",
-      "albumName": "The Stranger",
-      "artistName": "Chris Stapleton",
-      "song_uri": "spotify:track:2rhFaau65TFMv4mACtE9it",
-      "song_id": "2rhFaau65TFMv4mACtE9it"
-    },
-    {
       "songName": "No Problem (feat. Lil Wayne & 2 Chainz)",
       "albumName": "Coloring Book",
       "artistName": "Chance the Rapper",
@@ -187,16 +177,6 @@
       "id": 21
     },
     {
-      "songName": "Burn Rubber On Me (Why You Wanna Hurt Me)",
-      "albumName": "Greatest Hits",
-      "artistName": "The Gap Band",
-      "song_uri": ["spotify:track:32YzjV133gteg9LMBGO2OA"],
-      "song_id": "32YzjV133gteg9LMBGO2OA",
-      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
-      "playlistId": 1,
-      "id": 22
-    },
-    {
       "songName": "Hello",
       "albumName": "25",
       "artistName": "Adele",
@@ -225,26 +205,6 @@
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
       "id": 25
-    },
-    {
-      "songName": "Ready or Not",
-      "albumName": "Hello My Name Is...",
-      "artistName": "Bridgit Mendler",
-      "song_uri": ["spotify:track:5xvUgoVED1F4mBu8FL0HaW"],
-      "song_id": "5xvUgoVED1F4mBu8FL0HaW",
-      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
-      "playlistId": 1,
-      "id": 26
-    },
-    {
-      "songName": "Love song",
-      "albumName": "Norman Fucking Rockwell!",
-      "artistName": "Lana Del Rey",
-      "song_uri": ["spotify:track:5tyMJlMqaggzvuX7TtlrTe"],
-      "song_id": "5tyMJlMqaggzvuX7TtlrTe",
-      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
-      "playlistId": 1,
-      "id": 27
     },
     {
       "songName": "Next Song",
@@ -285,26 +245,6 @@
       "spotifyPlaylistId": "304hI5ej5i5Yoa9w8BvTtl",
       "playlistId": 2,
       "id": 31
-    },
-    {
-      "songName": "Rumor (Bryan Todd Remix)",
-      "albumName": "Rumor (Remixes)",
-      "artistName": "Lee Brice",
-      "song_uri": ["spotify:track:1nBJxJ5aI1jWjcw731YwHe"],
-      "song_id": "1nBJxJ5aI1jWjcw731YwHe",
-      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
-      "playlistId": 1,
-      "id": 32
-    },
-    {
-      "songName": "TEST DRIVE",
-      "albumName": "BALLADS 1",
-      "artistName": "Joji",
-      "song_uri": ["spotify:track:1DMEzmAoQIikcL52psptQL"],
-      "song_id": "1DMEzmAoQIikcL52psptQL",
-      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
-      "playlistId": 1,
-      "id": 33
     },
     {
       "songName": "Hot (feat. Gunna)",
@@ -365,6 +305,66 @@
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
       "id": 47
+    },
+    {
+      "songName": "Buttercup",
+      "albumName": "Pop Food",
+      "artistName": "Jack Stauber",
+      "song_uri": ["spotify:track:2mlGPkAx4kwF8Df0GlScsC"],
+      "song_id": "2mlGPkAx4kwF8Df0GlScsC",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 48
+    },
+    {
+      "songName": "Making Luv To The Beat (feat. T.I. & DJ E-Feezy) - MERCE Remix",
+      "albumName": "The Trojan Horse (Deluxe Edition)",
+      "artistName": "WATCH THE DUCK",
+      "song_uri": ["spotify:track:2haqQhsi8AM7mCpYPIr5mm"],
+      "song_id": "2haqQhsi8AM7mCpYPIr5mm",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 49
+    },
+    {
+      "songName": "Next Song",
+      "albumName": "Blank Blank",
+      "artistName": "DaBaby",
+      "song_uri": ["spotify:track:0rrVn0KMlLHtAklzUrrfoj"],
+      "song_id": "0rrVn0KMlLHtAklzUrrfoj",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 50
+    },
+    {
+      "songName": "Breaking the Law",
+      "albumName": "British Steel",
+      "artistName": "Judas Priest",
+      "song_uri": ["spotify:track:2RaA6kIcvomt77qlIgGhCT"],
+      "song_id": "2RaA6kIcvomt77qlIgGhCT",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 51
+    },
+    {
+      "songName": "Cheap Whiskey 70's Riesling (feat. Anderson .Paak)",
+      "albumName": "The Anderson .Paak EP",
+      "artistName": "Blended Babies",
+      "song_uri": ["spotify:track:5QzbOQWaED6Ot3YCrDu6pH"],
+      "song_id": "5QzbOQWaED6Ot3YCrDu6pH",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 52
+    },
+    {
+      "songName": "Scared Of Love",
+      "albumName": "Goodbye & Good Riddance",
+      "artistName": "Juice WRLD",
+      "song_uri": ["spotify:track:49QVOdWgGagzLrThkIqtK6"],
+      "song_id": "49QVOdWgGagzLrThkIqtK6",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 53
     }
   ],
   "sessionPlaylist": [
