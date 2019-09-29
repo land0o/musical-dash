@@ -15,22 +15,15 @@ import PlaylistSongCard from "./PlaylistSongCard";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
 import DataManager from "../DataManager";
-import SpotifyWebApi from "spotify-web-api-js";
+// import SpotifyWebApi from "spotify-web-api-js";
 
 const spotifyWebApi = new Spotify();
 const userId = sessionStorage.getItem("spotifyId");
-
-//4. will need a button to save playlist to database and to users spotify
-//5. a end playlist btn?
-//6.need to import the nav and sidebar
-//7.on the navbar the logo to the left and logout(clear localstoarge and reroute to homepage)
-//8.need to put the cards into the correct layout
 
 class PlaylistHome extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cSelected: [],
       userId: sessionStorage.getItem("spotifyId"),
       playlistName: "",
       currentPlaylistId: "",
@@ -42,7 +35,6 @@ class PlaylistHome extends Component {
       description: "",
       editedPlaylist: false
     };
-    this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
   }
   //renders playlist to created playlist card
   componentDidMount() {
@@ -59,7 +51,6 @@ class PlaylistHome extends Component {
       console.log(this.state.playlists);
     });
   };
-  //start here ask jenna whats missing? im passing the id from state so wtf r my songs??
   grabSongs = () => {
     DataManager.getAllSongs(this.state.playlistId).then(songResponse => {
       console.log("Songs in response", songResponse);
@@ -179,11 +170,11 @@ class PlaylistHome extends Component {
       .followPlaylist(id.playlistId)
       .then(alert(`${id.title} has been added to your playlists`));
   };
-
-  //not using yet but will be for toggling play functions
-  onRadioBtnClick(rSelected) {
-    this.setState({ rSelected });
-  }
+  playMusic = id => {
+    console.log(id);
+    spotifyWebApi.play({ context_uri: this.state.currentPlaylistId });
+    // {"context_uri": "spotify:playlist:1Je1IMUlBXcx1Fz0WE7oPT"}
+  };
 
   render() {
     return (
@@ -230,32 +221,16 @@ class PlaylistHome extends Component {
             </CardBody>
             <div>
               <ButtonGroup>
-                <Button
-                  outline
-                  color="info"
-                  onClick={() => this.onRadioBtnClick(1)}
-                  active={this.state.rSelected === 1}
-                >
-                  back
+                <Button outline color="info">
+                  Back
                 </Button>
-                <Button
-                  outline
-                  color="info"
-                  onClick={() => this.onRadioBtnClick(2)}
-                  active={this.state.rSelected === 2}
-                >
-                  play/pause
+                <Button outline color="info" onClick={this.playMusic}>
+                  Play
                 </Button>
-                <Button
-                  outline
-                  color="info"
-                  onClick={() => this.onRadioBtnClick(3)}
-                  active={this.state.rSelected === 3}
-                >
-                  skip
+                <Button outline color="info">
+                  Skip
                 </Button>
               </ButtonGroup>
-              <p>Selected: {this.state.rSelected}</p>
             </div>
             <CardBody className="playlistTable">
               <Table dark className="playlistSelector">
