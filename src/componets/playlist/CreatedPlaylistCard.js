@@ -5,7 +5,7 @@ import EditPlaylistForm from "./EditPlaylistForm";
 class CreatedPlaylistCard extends Component {
   state = {
     showEditForm: false,
-    title: "",
+    title: ""
   };
   //add music btn needs to set playlistId into state or local storage while also adding playlist info and tracks[] into state to manipulate the dom may need to use componet did mount to render
   handleAddMusic = () => {
@@ -16,6 +16,13 @@ class CreatedPlaylistCard extends Component {
       description: this.props.playlist.description
     };
     this.props.addCurrentPlaylistToStorage(PlaylistObj, playlistId);
+  };
+  handleAddPlaylist = () => {
+    const PlaylistObj = {
+      playlistId: this.props.playlist.spotifyId,
+      title: this.props.playlist.title
+    };
+    this.props.userFollowPlaylist(PlaylistObj);
   };
 
   render() {
@@ -41,6 +48,14 @@ class CreatedPlaylistCard extends Component {
             >
               <span role="img" />
               Add🎵
+            </Button>
+            <Button
+              size="sm"
+              color="info"
+              className="editPlaylist"
+              onClick={this.handleAddPlaylist}
+            >
+              Follow
             </Button>
           </p>
           <hr className="hrLine" />

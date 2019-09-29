@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Sidebar from "./nav/NavBar";
+// import TopNav from "./navbar/TopNav";
 import ApplicationViews from "./ApplicationViews";
 import "./MusicalDash.css";
 
@@ -7,7 +7,7 @@ class MusicalDash extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <Sidebar {...this.props}/> */}
+        {/* <TopNav {...this.props}/> */}
         <ApplicationViews />
       </React.Fragment>
     );

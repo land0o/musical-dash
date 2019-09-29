@@ -2,40 +2,27 @@
   text-align: center;
 }
 
-.links {
-  background-color: #282c34;
-  width: 35%;
-  height: 40%;
-  margin: 0;
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
-  font-size: calc(10px + 2vmin);
-  color: #61dafb;
-  border: 3px solid goldenrod;
-  padding: 10px;
-}
-
 .currentSong {
   display: block;
   border: 3px solid goldenrod;
-  width: 50%;
-  height: 50%;
+  width: 700px;
+  height: 600px;
   margin-top: 10px;
   background-color: #282c34;
   color: #61dafb;
 }
-.App{
-  display: flexbox;
+.App {
+  display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .songImg {
-  width: 65%;
-  height: auto;
+  width: 70%;
+  height: 70%;
 }
-
+.playlist {
+  margin-left: -35px;
+}
 div,
 button {
   margin: 15px;

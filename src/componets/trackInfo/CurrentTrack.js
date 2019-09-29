@@ -3,7 +3,9 @@ import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
 // import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
+import TopNav from "../navbar/TopNav";
 import DataManager from "../DataManager";
+// import { Container, Row, Col } from "reactstrap";
 
 const spotifyWebApi = new Spotify();
 
@@ -74,7 +76,7 @@ class CurrentTrack extends Component {
         };
         // console.log("spotify response", response);
         // console.log(newUser);
-        this.setState({spotifyId: response.id})
+        this.setState({ spotifyId: response.id });
         sessionStorage.setItem("spotifyId", response.id);
         sessionStorage.setItem("SpotifyEmail", response.email);
         this.setState({ newUser: newUser });
@@ -98,44 +100,36 @@ class CurrentTrack extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="App">
-        <div className="links">
-          <h3>Welcome To MusicalDash</h3>
-          <a href="http://localhost:8888">
-            <button>
-              Refresh Tokens
-            </button>
-          </a>
-          <a href="http://localhost:3000">
-            <button>
-              Logout
-            </button>
-          </a>
-        </div>
-        <div className="currentSong">
-          <div>
-            {" "}
-            <h3>Now Playing: {this.state.nowPlaying.name} </h3>{" "}
+      <React.Fragment>
+        <TopNav {...this.props} />
+        <div className="App">
+            <div className="playlist">
+              <PlaylistHome spotifyId={this.state.spotifyId} {...this.props} />
+            </div>
+            <div className="currentSong">
+              <div>
+                {" "}
+                <h3>Now Playing: {this.state.nowPlaying.name} </h3>{" "}
+              </div>
+              <div>
+                <img
+                  className="songImg"
+                  src={this.state.nowPlaying.image}
+                  alt="Now Playing"
+                />
+              </div>
+              <button
+                className="checkSongBtn"
+                onClick={() => this.getNowPlaying()}
+              >
+                Check Now Playing
+              </button>
+            </div>
           </div>
-          <div>
-            <img
-              className="songImg"
-              src={this.state.nowPlaying.image}
-              alt="Now Playing"
-            />
-          </div>
-          <button className="checkSongBtn" onClick={() => this.getNowPlaying()}>
-            Check Now Playing
-          </button>
-        </div>
-        <div>
-      
-          <PlaylistHome spotifyId={this.state.spotifyId}  {...this.props} />
-        </div>
-        {/* <div>
+          {/* <div>
           <SearchField {...this.props} />
         </div> */}
-      </div>
+      </React.Fragment>
     );
   }
 }
