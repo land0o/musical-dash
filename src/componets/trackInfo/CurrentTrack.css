@@ -10,6 +10,7 @@
   margin-top: 10px;
   background-color: #282c34;
   color: #61dafb;
+  border-radius: 2%;
 }
 .App {
   display: flex;
@@ -32,9 +33,9 @@ div button:hover {
   color: #61dafb;
   background: violet;
 }
-.checkSongBtn {
+/* .checkSongBtn {
   margin-bottom: 10px;
-}
+} */
 .checkSongBtn:hover {
   cursor: pointer;
   color: #61dafb;

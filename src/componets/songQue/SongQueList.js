@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-//1.layout for users
-class UserCard extends Component {
+
+class SongQueList extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class UserCard extends Component {
     }
 }
 
-export default UserCard
+export default SongQueList

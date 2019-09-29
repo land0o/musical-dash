@@ -4,7 +4,7 @@
   margin: 5px 5px 5px 5px;
   background-color: #282c34;
 } */
-.searchHeader {
+/* .searchHeader {
   color: #61dafb;
   font-size: calc(10px + 2vmin);
   font-weight: bolder;
@@ -12,7 +12,7 @@
   width: 50%;
   margin: auto;
   border-radius: 10%;
-}
+} */
 
 .cardText {
   overflow-y: scroll;
