@@ -15,6 +15,7 @@ import PlaylistSongCard from "./PlaylistSongCard";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
 import DataManager from "../DataManager";
+import SpotifyWebApi from "spotify-web-api-js";
 
 const spotifyWebApi = new Spotify();
 const userId = sessionStorage.getItem("spotifyId");
@@ -164,9 +165,19 @@ class PlaylistHome extends Component {
     console.log(removeObj.song_uri);
     console.log(this.state.currentPlaylistId);
     spotifyWebApi
-      .removeTracksFromPlaylist(this.state.currentPlaylistId, removeObj.song_uri)
-      .then(DataManager.deleteSong(removeObj.id)).then(() => this.grabSongs())
+      .removeTracksFromPlaylist(
+        this.state.currentPlaylistId,
+        removeObj.song_uri
+      )
+      .then(DataManager.deleteSong(removeObj.id))
+      .then(() => this.grabSongs())
       .then(alert(`Song has been removed from ${this.state.playlistName}`));
+  };
+  userFollowPlaylist = id => {
+    console.log(id);
+    spotifyWebApi
+      .followPlaylist(id.playlistId)
+      .then(alert(`${id.title} has been added to your playlists`));
   };
 
   //not using yet but will be for toggling play functions
@@ -285,6 +296,7 @@ class PlaylistHome extends Component {
                         addCurrentPlaylistToStorage={
                           this.addCurrentPlaylistToStorage
                         }
+                        userFollowPlaylist={this.userFollowPlaylist}
                       />
                       {/* <EditPlaylistForm
                       editPlaylist={this.editPlaylist}

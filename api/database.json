@@ -365,6 +365,16 @@
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
       "id": 53
+    },
+    {
+      "songName": "Kolors ft. Smino",
+      "albumName": "Soulection White Label - Monte Booker",
+      "artistName": "Monte Booker",
+      "song_uri": ["spotify:track:0l2c1Mkdi8BbcDFDuTpHjA"],
+      "song_id": "0l2c1Mkdi8BbcDFDuTpHjA",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 54
     }
   ],
   "sessionPlaylist": [
