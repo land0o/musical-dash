@@ -3,6 +3,7 @@ import "./CurrentTrack.css";
 import Spotify from "spotify-web-api-js";
 // import SearchField from "../search/SearchField";
 import PlaylistHome from "../playlist/PlaylistHome";
+import TopNav from "../navbar/TopNav";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
@@ -99,7 +100,8 @@ class CurrentTrack extends Component {
     console.log(this.state);
     return (
       <div className="App">
-        <div className="links">
+        <TopNav {...this.props}/>
+        {/* <div className="links">
           <h3>Welcome To MusicalDash</h3>
           <a href="http://localhost:8888">
             <button>
@@ -111,7 +113,7 @@ class CurrentTrack extends Component {
               Logout
             </button>
           </a>
-        </div>
+        </div> */}
         <div className="currentSong">
           <div>
             {" "}
