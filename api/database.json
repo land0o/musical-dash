@@ -20,18 +20,21 @@
       "spotifyId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "title": "AppTest",
       "description": "testing edit",
+      "userSpotifyId": "12177171325",
       "id": 1
     },
     {
       "spotifyId": "3nKeFjGKNk31II94iwsvkD",
       "title": "Playlist Test",
       "description": "testing new playlist card",
+      "userSpotifyId": "12177171325",
       "id": 2
     },
     {
       "spotifyId": "7wxgYsSGtdHvl3DLCk3EOz",
       "title": "ErynNKit",
       "description": "Chili mix",
+      "userSpotifyId": "12177171325",
       "id": 5
     }
   ],
@@ -375,6 +378,16 @@
       "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
       "playlistId": 1,
       "id": 54
+    },
+    {
+      "songName": "Wild Irish Roses",
+      "albumName": "blkswn",
+      "artistName": "Smino",
+      "song_uri": ["spotify:track:6efkcs2aUBMFKxl0cl2JWQ"],
+      "song_id": "6efkcs2aUBMFKxl0cl2JWQ",
+      "spotifyPlaylistId": "0q7eHiCVZ8z3Aq3eOkE9Hb",
+      "playlistId": 1,
+      "id": 55
     }
   ],
   "sessionPlaylist": [

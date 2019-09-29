@@ -92,7 +92,8 @@ class PlaylistHome extends Component {
         const playlistObj = {
           spotifyId: this.state.currentPlaylistId,
           title: this.state.playlistName,
-          description: this.state.playlistDesc
+          description: this.state.playlistDesc,
+          userSpotifyId: this.state.userId
         };
         console.log(playlistObj);
         return playlistObj;
@@ -172,8 +173,9 @@ class PlaylistHome extends Component {
   };
   playMusic = id => {
     console.log(id);
-    spotifyWebApi.play({ context_uri: this.state.currentPlaylistId });
-    // {"context_uri": "spotify:playlist:1Je1IMUlBXcx1Fz0WE7oPT"}
+    console.log(this.state.currentPlaylistId);
+    spotifyWebApi.play({ "context_uri": `spotify:playlists:${this.state.currentPlaylistId}` });
+    // {"context_uri": "spotify:playlists:1Je1IMUlBXcx1Fz0WE7oPT"}
   };
 
   render() {
