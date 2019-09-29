@@ -12,6 +12,12 @@
   background: url(./img/cellular.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
+.topCard{
+  background-color: #3F385A;
+  border-radius: 2%;
+  width: 524px;
+  margin: auto;
+}
 .playlistTable {
   width: auto;
   overflow-y: scroll;
@@ -25,6 +31,7 @@
 }
 .playlistSelector{
   color: #61dafb;
+  margin-top: -20px;
   height: 50px;
 }
 .editPlaylist{

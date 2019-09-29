@@ -7,7 +7,7 @@ import {
   CardTitle,
   CardSubtitle
 } from "reactstrap";
-import { Button, ButtonGroup, Form, FormGroup, Input } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
 import "./Playlist.css";
 import CreatedPlaylistCard from "./CreatedPlaylistCard";
 import PlaylistSongCard from "./PlaylistSongCard";
@@ -174,7 +174,9 @@ class PlaylistHome extends Component {
   playMusic = id => {
     console.log(id);
     console.log(this.state.currentPlaylistId);
-    spotifyWebApi.play({ "context_uri": `spotify:playlists:${this.state.currentPlaylistId}` });
+    spotifyWebApi.play({
+      context_uri: `spotify:playlists:${this.state.currentPlaylistId}`
+    });
     // {"context_uri": "spotify:playlists:1Je1IMUlBXcx1Fz0WE7oPT"}
   };
 
@@ -183,7 +185,7 @@ class PlaylistHome extends Component {
       <div>
         <div className="playlistContainer">
           <Card className="playlistCard">
-            <CardBody>
+            <CardBody className="topCard">
               <CardTitle>Create A PlayList</CardTitle>
               <hr />
               <CardSubtitle className="playlistForm">
@@ -222,7 +224,14 @@ class PlaylistHome extends Component {
               <CardSubtitle>{this.state.playlistDesc}</CardSubtitle>
             </CardBody>
             <div>
-              <ButtonGroup>
+              <SearchField
+                playlistId={this.state.playlistId}
+                grabSongs={this.grabSongs}
+                currentPlaylistId={this.state.currentPlaylistId}
+                playlistName={this.state.playlistName}
+                {...this.props}
+              />
+              {/* <ButtonGroup>
                 <Button outline color="info">
                   Back
                 </Button>
@@ -232,7 +241,7 @@ class PlaylistHome extends Component {
                 <Button outline color="info">
                   Skip
                 </Button>
-              </ButtonGroup>
+              </ButtonGroup> */}
             </div>
             <CardBody className="playlistTable">
               <Table dark className="playlistSelector">
@@ -287,13 +296,13 @@ class PlaylistHome extends Component {
           </div>
         </div>
         <div>
-          <SearchField
+          {/* <SearchField
             playlistId={this.state.playlistId}
             grabSongs={this.grabSongs}
             currentPlaylistId={this.state.currentPlaylistId}
             playlistName={this.state.playlistName}
             {...this.props}
-          />
+          /> */}
         </div>
       </div>
     );
