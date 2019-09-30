@@ -14,8 +14,8 @@ import PlaylistSongCard from "./PlaylistSongCard";
 // import EditPlaylistForm from "./EditPlaylistForm";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
+import SongQueList from "../songQue/SongQueList";
 import DataManager from "../DataManager";
-// import SpotifyWebApi from "spotify-web-api-js";
 
 const spotifyWebApi = new Spotify();
 const userId = sessionStorage.getItem("spotifyId");
@@ -83,7 +83,9 @@ class PlaylistHome extends Component {
     spotifyWebApi
       .createPlaylist(userId, {
         name: this.state.playlistName,
-        description: this.state.playlistDesc
+        description: this.state.playlistDesc,
+        public: false,
+        collaborative: true
       })
       .then(playlistResponse => {
         console.log("newPlaylist response", playlistResponse);
@@ -144,7 +146,8 @@ class PlaylistHome extends Component {
         playlistId: PlaylistObj.id,
         playlistName: PlaylistObj.title,
         currentPlaylistId: playlistId,
-        playlistDesc: PlaylistObj.description
+        playlistDesc: PlaylistObj.description,
+        userSpotifyId: PlaylistObj.userSpotifyId
       },
       this.grabSongs
     );
@@ -231,17 +234,6 @@ class PlaylistHome extends Component {
                 playlistName={this.state.playlistName}
                 {...this.props}
               />
-              {/* <ButtonGroup>
-                <Button outline color="info">
-                  Back
-                </Button>
-                <Button outline color="info" onClick={this.playMusic}>
-                  Play
-                </Button>
-                <Button outline color="info">
-                  Skip
-                </Button>
-              </ButtonGroup> */}
             </div>
             <CardBody className="playlistTable">
               <Table dark className="playlistSelector">
@@ -295,15 +287,7 @@ class PlaylistHome extends Component {
             </Card>
           </div>
         </div>
-        <div>
-          {/* <SearchField
-            playlistId={this.state.playlistId}
-            grabSongs={this.grabSongs}
-            currentPlaylistId={this.state.currentPlaylistId}
-            playlistName={this.state.playlistName}
-            {...this.props}
-          /> */}
-        </div>
+        {/* <SongQueList {...this.props} playlistName={this.state.playlistName} /> */}
       </div>
     );
   }

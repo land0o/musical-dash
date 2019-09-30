@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Searchfield.css";
-import { Card, CardBody, CardTitle} from "reactstrap";
+import { Card, CardBody, CardTitle } from "reactstrap";
 import { InputGroup, Button, Input } from "reactstrap";
 import Spotify from "spotify-web-api-js";
 import SongCard from "./SongCard";
@@ -39,19 +39,20 @@ class SearchField extends Component {
       console.log(this.state.tracks);
     });
   };
-//setInterval
+  //setInterval
   //to add songs you need playlistId, songuri and song id, pass the info in like we did with the getNewPlaylist Function
   addSongToSpotify = track => {
     console.log("track going into spotify post", track.song_uri);
     // const playlistName = sessionStorage.getItem("currentPlaylistName");
-    console.log("playlist id",this.props.playlistId);
+    console.log("playlist id", this.props.playlistId);
     console.log(track);
     spotifyWebApi
       .addTracksToPlaylist(this.props.currentPlaylistId, track.song_uri)
       .then(data => {
         console.log("Data returned from songs from spotify", data);
       })
-      .then(DataManager.postSong(track)).then(() => this.props.grabSongs())
+      .then(DataManager.postSong(track))
+      .then(() => this.props.grabSongs());
     alert(`${track.songName} has been added to ${this.props.playlistName}`);
   };
 

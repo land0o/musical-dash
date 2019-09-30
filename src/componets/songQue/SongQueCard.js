@@ -1,13 +1,29 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { Button } from "reactstrap";
 
 class SongQueCard extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <td>Millionaire</td>
+        <td>Chris Stapleton</td>
+        <td>From A Room Volume 2</td>
+        {/* <td>{this.props.playlistSong.songName}</td>
+        <td>{this.props.playlistSong.artistName}</td>
+        <td>{this.props.playlistSong.albumName}</td> */}
+        <td>
+          <Button size="sm" color="info">
+            ✔
+          </Button>
+        </td>
+        <td>
+          <Button size="sm" color="info">
+            x
+          </Button>
+        </td>
+      </React.Fragment>
+    );
+  }
 }
 
-export default SongQueCard
+export default SongQueCard;
