@@ -28,6 +28,13 @@ class CreatedPlaylistCard extends Component {
     };
     this.props.userFollowPlaylist(PlaylistObj);
   };
+  onClick = () => {
+    if (this.state.showEditForm === false) {
+      this.setState({ showEditForm: true });
+    } else {
+      this.setState({ showEditForm: false });
+    }
+  };
 
   render() {
     return (
@@ -42,7 +49,7 @@ class CreatedPlaylistCard extends Component {
                 size="sm"
                 color="info"
                 className="editPlaylist"
-                onClick={() => this.setState({ showEditForm: true })}
+                onClick={this.onClick}
               >
                 edit
               </Button>
