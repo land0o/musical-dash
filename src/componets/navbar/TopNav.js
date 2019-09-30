@@ -3,7 +3,11 @@ import "./TopNav.css";
 // import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 class TopNav extends Component {
+  state ={
+    userName: sessionStorage.getItem("SpotifyName")
+  }
   logout = () => {
     sessionStorage.clear();
   };
@@ -12,6 +16,7 @@ class TopNav extends Component {
       <div>
         <nav className="navbar navbar-dark light-blue flex-md-nowrap p-0 shadow">
           <img src={require("./img/MdLogo.svg")} alt="" className="navImg" />
+          <p className="welcome">Welcome {this.state.userName}</p>
           <ul className="nav nav-pills nav-fill">
             <li className="nav-item">
               <a className="nav-link" href="http://localhost:8888">

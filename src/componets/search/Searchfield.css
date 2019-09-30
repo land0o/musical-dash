@@ -1,10 +1,10 @@
-.searchCard {
+/* .searchCard {
   border: 2px solid goldenrod;
   width: 42em;
   margin: 5px 5px 5px 5px;
   background-color: #282c34;
-}
-.searchHeader {
+} */
+/* .searchHeader {
   color: #61dafb;
   font-size: calc(10px + 2vmin);
   font-weight: bolder;
@@ -12,7 +12,7 @@
   width: 50%;
   margin: auto;
   border-radius: 10%;
-}
+} */
 
 .cardText {
   overflow-y: scroll;
@@ -20,13 +20,24 @@
   color: #61dafb;
   font-weight: bold;
   background-color: #282c34;
+  margin-top: -45px;
+  margin-left: -15px;
+  font-size: medium;
+  width: 25em;
 }
+/* .songCard {
+  padding: 30px;
+  background: url(./img/beat-headphones.jpg) no-repeat 50% 50%;
+  background-size: cover;
+} */
 .songCard {
   padding: 30px;
   background: url(./img/beat-headphones.jpg) no-repeat 50% 50%;
   background-size: cover;
+  background-color: #3f385a;
+  height: 15em;
 }
 
-.hrLine{
+.hrLineSong {
   border: 1px solid #61dafb;
 }

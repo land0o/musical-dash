@@ -6,19 +6,24 @@
   display: block;
   border: 3px solid goldenrod;
   width: 700px;
-  height: 600px;
+  height: 550px;
   margin-top: 10px;
   background-color: #282c34;
   color: #61dafb;
+  border-radius: 2%;
 }
 .App {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
+}
+.chatWindow{
+  width: 10%;
 }
 .songImg {
-  width: 70%;
-  height: 70%;
+  width: 400px;
+  height: 400px;
 }
 .playlist {
   margin-left: -35px;
@@ -32,9 +37,9 @@ div button:hover {
   color: #61dafb;
   background: violet;
 }
-.checkSongBtn {
+/* .checkSongBtn {
   margin-bottom: 10px;
-}
+} */
 .checkSongBtn:hover {
   cursor: pointer;
   color: #61dafb;
