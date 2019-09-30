@@ -43,7 +43,7 @@
     {
       "spotifyId": "1sTaS9pT4oVLWs2KecjmQH",
       "title": "Charlie Wilson",
-      "description": "Real Music",
+      "description": "Tink",
       "userSpotifyId": "12177171325",
       "userName": "12177171325",
       "id": 9
@@ -54,7 +54,9 @@
       "songName": "Get Me Home",
       "albumName": "Ill Na Na",
       "artistName": "Foxy Brown",
-      "song_uri": ["spotify:track:6Xo9osN1HErsEJoqwj4eDg"],
+      "song_uri": [
+        "spotify:track:6Xo9osN1HErsEJoqwj4eDg"
+      ],
       "song_id": "6Xo9osN1HErsEJoqwj4eDg",
       "playlistId": 5,
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
@@ -64,7 +66,9 @@
       "songName": "BMO",
       "albumName": "Shea Butter Baby",
       "artistName": "Ari Lennox",
-      "song_uri": ["spotify:track:7Ffgp7DIow5wECYQyzEiTq"],
+      "song_uri": [
+        "spotify:track:7Ffgp7DIow5wECYQyzEiTq"
+      ],
       "song_id": "7Ffgp7DIow5wECYQyzEiTq",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
@@ -74,7 +78,9 @@
       "songName": "Old Time Rock & Roll",
       "albumName": "Stranger In Town",
       "artistName": "Bob Seger",
-      "song_uri": ["spotify:track:5EOoMWIB9iK4ZpcSex9Ec7"],
+      "song_uri": [
+        "spotify:track:5EOoMWIB9iK4ZpcSex9Ec7"
+      ],
       "song_id": "5EOoMWIB9iK4ZpcSex9Ec7",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
@@ -84,7 +90,9 @@
       "songName": "Hello",
       "albumName": "2014 Forest Hills Drive",
       "artistName": "J. Cole",
-      "song_uri": ["spotify:track:30Chv2SmIry70YwtmtaKnj"],
+      "song_uri": [
+        "spotify:track:30Chv2SmIry70YwtmtaKnj"
+      ],
       "song_id": "30Chv2SmIry70YwtmtaKnj",
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
@@ -94,7 +102,9 @@
       "songName": "Shadow Man (feat. Phoelix, Smino & Saba)",
       "albumName": "Telefone",
       "artistName": "Noname",
-      "song_uri": ["spotify:track:1h2LHhmyAXi8tPNLi806JA"],
+      "song_uri": [
+        "spotify:track:1h2LHhmyAXi8tPNLi806JA"
+      ],
       "song_id": "1h2LHhmyAXi8tPNLi806JA",
       "spotifyPlaylistId": "4SWbZ6BZHBzbELSC1EXvLF",
       "playlistId": 7,
@@ -104,7 +114,9 @@
       "songName": "Darlin'",
       "albumName": "Darlin'",
       "artistName": "tobi lou",
-      "song_uri": ["spotify:track:0eGrwX4kf5sV1faR5tZDp3"],
+      "song_uri": [
+        "spotify:track:0eGrwX4kf5sV1faR5tZDp3"
+      ],
       "song_id": "0eGrwX4kf5sV1faR5tZDp3",
       "spotifyPlaylistId": "6TJMxW1TQxWMwrk8NDNqDv",
       "playlistId": 8,
@@ -114,7 +126,9 @@
       "songName": "There Goes My Baby",
       "albumName": "Uncle Charlie",
       "artistName": "Charlie Wilson",
-      "song_uri": ["spotify:track:6rZsGpXDr0WsUSFitx3v8N"],
+      "song_uri": [
+        "spotify:track:6rZsGpXDr0WsUSFitx3v8N"
+      ],
       "song_id": "6rZsGpXDr0WsUSFitx3v8N",
       "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
       "playlistId": 9,
@@ -124,7 +138,9 @@
       "songName": "Outstanding - Original 12\" Mix",
       "albumName": "The Best Of The Gap Band",
       "artistName": "The Gap Band",
-      "song_uri": ["spotify:track:4SHR8Udn1oQ95yvXRZU1I8"],
+      "song_uri": [
+        "spotify:track:4SHR8Udn1oQ95yvXRZU1I8"
+      ],
       "song_id": "4SHR8Udn1oQ95yvXRZU1I8",
       "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
       "playlistId": 9,
@@ -134,7 +150,9 @@
       "songName": "You Dropped A Bomb On Me",
       "albumName": "The Gap Band IV",
       "artistName": "The Gap Band",
-      "song_uri": ["spotify:track:1VKPiQJnV15flF5B3zeocD"],
+      "song_uri": [
+        "spotify:track:1VKPiQJnV15flF5B3zeocD"
+      ],
       "song_id": "1VKPiQJnV15flF5B3zeocD",
       "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
       "playlistId": 9,

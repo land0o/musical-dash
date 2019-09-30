@@ -166,9 +166,11 @@ class PlaylistHome extends Component {
         this.state.currentPlaylistId,
         removeObj.song_uri
       )
-      .then(DataManager.deleteSong(removeObj.id)
-      .then(() => this.grabSongs())
-      .then(alert(`Song has been removed from ${this.state.playlistName}`)))
+      .then(
+        DataManager.deleteSong(removeObj.id)
+          .then(() => this.grabSongs())
+          .then(alert(`Song has been removed from ${this.state.playlistName}`))
+      );
   };
   userFollowPlaylist = id => {
     console.log(id);
@@ -176,11 +178,11 @@ class PlaylistHome extends Component {
       .followPlaylist(id.playlistId)
       .then(alert(`${id.title} has been added to your playlists`));
   };
-  playMusic = id => {
-    console.log(id);
-    console.log(this.state.currentPlaylistId);
+  playMusic = () => {
+    // console.log(id);
+    console.log("play music play current", this.state.currentPlaylistId);
     spotifyWebApi.play({
-      context_uri: `spotify:playlists:${this.state.currentPlaylistId}`
+      "context_uri": `spotify:playlist:${this.state.currentPlaylistId}`
     });
     // {"context_uri": "spotify:playlists:1Je1IMUlBXcx1Fz0WE7oPT"}
   };
@@ -236,6 +238,11 @@ class PlaylistHome extends Component {
                 playlistName={this.state.playlistName}
                 {...this.props}
               />
+            </div>
+            <div>
+              <Button outline color="info" size="lg" onClick={this.playMusic}>
+                Play
+              </Button>
             </div>
             <CardBody className="playlistTable">
               <Table dark className="playlistSelector">
