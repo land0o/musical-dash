@@ -182,7 +182,7 @@ class PlaylistHome extends Component {
     // console.log(id);
     console.log("play music play current", this.state.currentPlaylistId);
     spotifyWebApi.play({
-      "context_uri": `spotify:playlist:${this.state.currentPlaylistId}`
+      context_uri: `spotify:playlist:${this.state.currentPlaylistId}`
     });
     // {"context_uri": "spotify:playlists:1Je1IMUlBXcx1Fz0WE7oPT"}
   };
@@ -239,9 +239,9 @@ class PlaylistHome extends Component {
                 {...this.props}
               />
             </div>
-            <div>
-              <Button outline color="info" size="sm" onClick={this.playMusic}>
-                Play
+            <div className="playBtn">
+              <Button outline color="info" size="lg" block
+                onClick={this.playMusic}> Play
               </Button>
             </div>
             <CardBody className="playlistTable">

@@ -26,6 +26,11 @@
   font-size: medium;
   font-style: oblique;
 }
+.playBtn{
+  margin-top: -15px;
+  width: 50%;
+  margin: auto;
+}
 .playlistBtn {
   margin: auto;
   margin-top: 5px;
