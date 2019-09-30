@@ -240,7 +240,7 @@ class PlaylistHome extends Component {
               />
             </div>
             <div>
-              <Button outline color="info" size="lg" onClick={this.playMusic}>
+              <Button outline color="info" size="sm" onClick={this.playMusic}>
                 Play
               </Button>
             </div>
