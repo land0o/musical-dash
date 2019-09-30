@@ -47,33 +47,17 @@
       "userSpotifyId": "12177171325",
       "userName": "12177171325",
       "id": 9
+    },
+    {
+      "spotifyId": "3E9g6fzQxyK1NtwjLccO0P",
+      "title": "AppTest",
+      "description": "collab",
+      "userSpotifyId": "jtowxgcgpdzemj095qfh344so",
+      "userName": "tink",
+      "id": 10
     }
   ],
   "songsAddedToPlaylist": [
-    {
-      "songName": "No Problem (feat. Lil Wayne & 2 Chainz)",
-      "albumName": "Coloring Book",
-      "artistName": "Chance the Rapper",
-      "song_uri": [
-        "spotify:track:0v9Wz8o0BT8DU38R4ddjeH"
-      ],
-      "song_id": "0v9Wz8o0BT8DU38R4ddjeH",
-      "playlistId": 5,
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "id": 8
-    },
-    {
-      "songName": "Before I Let You Go",
-      "albumName": "Blackstreet",
-      "artistName": "Blackstreet",
-      "song_uri": [
-        "spotify:track:2rkVoKVEMuct8SmEIGKzBw"
-      ],
-      "song_id": "2rkVoKVEMuct8SmEIGKzBw",
-      "playlistId": 5,
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "id": 10
-    },
     {
       "songName": "Get Me Home",
       "albumName": "Ill Na Na",
@@ -87,66 +71,6 @@
       "id": 11
     },
     {
-      "songName": "Usher",
-      "albumName": "Baby Talk 5",
-      "artistName": "DaBaby",
-      "song_uri": [
-        "spotify:track:71WmhNFdGurCrFbyDyYe1C"
-      ],
-      "song_id": "71WmhNFdGurCrFbyDyYe1C",
-      "playlistId": 5,
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "id": 12
-    },
-    {
-      "songName": "Usher",
-      "albumName": "Baby Talk 5",
-      "artistName": "DaBaby",
-      "song_uri": [
-        "spotify:track:71WmhNFdGurCrFbyDyYe1C"
-      ],
-      "song_id": "71WmhNFdGurCrFbyDyYe1C",
-      "playlistId": 5,
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "id": 13
-    },
-    {
-      "songName": "Girls Like You (feat. Cardi B)",
-      "albumName": "Red Pill Blues (Deluxe)",
-      "artistName": "Maroon 5",
-      "song_uri": [
-        "spotify:track:6V1bu6o1Yo5ZXnsCJU8Ovk"
-      ],
-      "song_id": "6V1bu6o1Yo5ZXnsCJU8Ovk",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 14
-    },
-    {
-      "songName": "Money",
-      "albumName": "Money",
-      "artistName": "Cardi B",
-      "song_uri": [
-        "spotify:track:2GGMabyHXnJmjY6CXhhB2e"
-      ],
-      "song_id": "2GGMabyHXnJmjY6CXhhB2e",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 15
-    },
-    {
-      "songName": "Bodak Yellow",
-      "albumName": "Invasion of Privacy",
-      "artistName": "Cardi B",
-      "song_uri": [
-        "spotify:track:6KBYefIoo7KydImq1uUQlL"
-      ],
-      "song_id": "6KBYefIoo7KydImq1uUQlL",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 16
-    },
-    {
       "songName": "BMO",
       "albumName": "Shea Butter Baby",
       "artistName": "Ari Lennox",
@@ -157,42 +81,6 @@
       "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
       "playlistId": 5,
       "id": 17
-    },
-    {
-      "songName": "Up Late",
-      "albumName": "Shea Butter Baby",
-      "artistName": "Ari Lennox",
-      "song_uri": [
-        "spotify:track:4ZSQS1o7qYAXJa5I37lk5x"
-      ],
-      "song_id": "4ZSQS1o7qYAXJa5I37lk5x",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 18
-    },
-    {
-      "songName": "In My Feelings",
-      "albumName": "Scorpion",
-      "artistName": "Drake",
-      "song_uri": [
-        "spotify:track:2G7V7zsVDxg1yRsu7Ew9RJ"
-      ],
-      "song_id": "2G7V7zsVDxg1yRsu7Ew9RJ",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 19
-    },
-    {
-      "songName": "Blow the Whistle",
-      "albumName": "Blow The Whistle",
-      "artistName": "Too $hort",
-      "song_uri": [
-        "spotify:track:2lMg3lCMOGistaWBNGjuT3"
-      ],
-      "song_id": "2lMg3lCMOGistaWBNGjuT3",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 20
     },
     {
       "songName": "Old Time Rock & Roll",
@@ -219,18 +107,6 @@
       "id": 25
     },
     {
-      "songName": "Next Song",
-      "albumName": "Blank Blank",
-      "artistName": "DaBaby",
-      "song_uri": [
-        "spotify:track:0rrVn0KMlLHtAklzUrrfoj"
-      ],
-      "song_id": "0rrVn0KMlLHtAklzUrrfoj",
-      "spotifyPlaylistId": "7wxgYsSGtdHvl3DLCk3EOz",
-      "playlistId": 5,
-      "id": 29
-    },
-    {
       "songName": "Shadow Man (feat. Phoelix, Smino & Saba)",
       "albumName": "Telefone",
       "artistName": "Noname",
@@ -255,18 +131,6 @@
       "id": 63
     },
     {
-      "songName": "Sacrifices (with EARTHGANG & J. Cole feat. Smino & Saba)",
-      "albumName": "Revenge Of The Dreamers III",
-      "artistName": "Dreamville",
-      "song_uri": [
-        "spotify:track:7wTA0NKIm6T7nP2kaymU2a"
-      ],
-      "song_id": "7wTA0NKIm6T7nP2kaymU2a",
-      "spotifyPlaylistId": "6TJMxW1TQxWMwrk8NDNqDv",
-      "playlistId": 8,
-      "id": 64
-    },
-    {
       "songName": "There Goes My Baby",
       "albumName": "Uncle Charlie",
       "artistName": "Charlie Wilson",
@@ -277,30 +141,6 @@
       "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
       "playlistId": 9,
       "id": 65
-    },
-    {
-      "songName": "I'm Blessed",
-      "albumName": "I'm Blessed",
-      "artistName": "Charlie Wilson",
-      "song_uri": [
-        "spotify:track:5XWaXNh3jEy29P1S7Ug1v5"
-      ],
-      "song_id": "5XWaXNh3jEy29P1S7Ug1v5",
-      "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
-      "playlistId": 9,
-      "id": 66
-    },
-    {
-      "songName": "I Wanna Be Your Man",
-      "albumName": "Just Charlie",
-      "artistName": "Charlie Wilson",
-      "song_uri": [
-        "spotify:track:1K8NUiq5OAIysDn49yefb1"
-      ],
-      "song_id": "1K8NUiq5OAIysDn49yefb1",
-      "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
-      "playlistId": 9,
-      "id": 67
     },
     {
       "songName": "Outstanding - Original 12\" Mix",
@@ -325,6 +165,18 @@
       "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
       "playlistId": 9,
       "id": 69
+    },
+    {
+      "songName": "Money In The Grave (Drake ft. Rick Ross)",
+      "albumName": "The Best In The World Pack",
+      "artistName": "Drake",
+      "song_uri": [
+        "spotify:track:5ry2OE6R2zPQFDO85XkgRb"
+      ],
+      "song_id": "5ry2OE6R2zPQFDO85XkgRb",
+      "spotifyPlaylistId": "3E9g6fzQxyK1NtwjLccO0P",
+      "playlistId": 10,
+      "id": 70
     }
   ],
   "chat": [
@@ -352,6 +204,11 @@
       "userName": "12177171325",
       "message": "I made a Charlie Wilson playlist for you boss..",
       "id": 6
+    },
+    {
+      "userName": "12177171325",
+      "message": "mark",
+      "id": 7
     }
   ]
 }

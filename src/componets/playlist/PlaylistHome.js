@@ -166,9 +166,9 @@ class PlaylistHome extends Component {
         this.state.currentPlaylistId,
         removeObj.song_uri
       )
-      .then(DataManager.deleteSong(removeObj.id))
+      .then(DataManager.deleteSong(removeObj.id)
       .then(() => this.grabSongs())
-      .then(alert(`Song has been removed from ${this.state.playlistName}`));
+      .then(alert(`Song has been removed from ${this.state.playlistName}`)))
   };
   userFollowPlaylist = id => {
     console.log(id);
