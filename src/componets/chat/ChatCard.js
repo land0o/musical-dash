@@ -13,22 +13,22 @@ class ChatCard extends Component {
           <div className="chats">
             <p>
               {this.props.chat.userName}: {this.props.chat.message}
-              </p>
-              {this.state.userName === this.props.chat.userName && (
-                <div className="chatBtns">
-                  <button
-                    id="chatDelete"
-                    onClick={() => this.props.deleteChats(this.props.chat.id)}
-                  >
-                    🗑
-                  </button>
-                </div>
-              )}
+            </p>
+            {this.state.userName === this.props.chat.userName && (
+              <div className="chatBtns">
+                <button
+                  id="chatDelete"
+                  onClick={() => this.props.deleteChats(this.props.chat.id)}
+                >
+                  🗑
+                </button>
+              </div>
+            )}
             {/* end of chat btns  */}
           </div>
           {/* end of chats section  */}
         </div>
-        <hr className="hrLine"/>
+        <hr className="hrLine" />
         {/* end of chatCardContent section  */}
       </div>
     );

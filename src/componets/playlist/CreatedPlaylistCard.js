@@ -6,7 +6,8 @@ import "./Playlist.css";
 class CreatedPlaylistCard extends Component {
   state = {
     showEditForm: false,
-    title: ""
+    title: "",
+    userName: sessionStorage.getItem("SpotifyName")
   };
   //add music btn needs to set playlistId into state or local storage while also adding playlist info and tracks[] into state to manipulate the dom may need to use componet did mount to render
   handleAddMusic = () => {
@@ -33,16 +34,19 @@ class CreatedPlaylistCard extends Component {
       <div className="createdPlaylistCard">
         <div className="singlePlaylist">
           <p>
-            {this.props.playlist.title} for {this.props.playlist.description} by {this.props.playlist.userName}
+            {this.props.playlist.title} for {this.props.playlist.description} by{" "}
+            {this.props.playlist.userName}
             <br />
-            <Button
-              size="sm"
-              color="info"
-              className="editPlaylist"
-              onClick={() => this.setState({ showEditForm: true })}
-            >
-              edit
-            </Button>
+            {this.state.userName === this.props.playlist.userName && (
+              <Button
+                size="sm"
+                color="info"
+                className="editPlaylist"
+                onClick={() => this.setState({ showEditForm: true })}
+              >
+                edit
+              </Button>
+            )}
             <Button
               size="sm"
               color="info"
