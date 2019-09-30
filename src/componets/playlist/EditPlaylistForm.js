@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
+import "./Playlist.css";
 class EditPlaylistForm extends Component {
   state = {
     title: "",
@@ -66,7 +67,7 @@ class EditPlaylistForm extends Component {
           >
             Delete
           </Button>
-          <hr className="hrLine" />
+          <hr className="hrLinePlaylist" />
         </div>
       </div>
     );

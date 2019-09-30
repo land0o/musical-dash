@@ -2,6 +2,7 @@
   border: 2px solid goldenrod;
   width: 600px;
   background-color: #282c34;
+  border-radius: 2%;
 }
 .playlistCard {
   color: #61dafb;
@@ -12,7 +13,7 @@
   background: url(./img/cellular.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
-.topCard{
+.topCard {
   background-color: #403659;
   border-radius: 2%;
   width: 524px;
@@ -25,19 +26,22 @@
   font-size: medium;
   font-style: oblique;
 }
-.playlistBtn{
+.playlistBtn {
   margin: auto;
   margin-top: 5px;
 }
-.playlistSelector{
+.playlistSelector {
   color: #61dafb;
   margin-top: -20px;
   height: 50px;
 }
-.editPlaylist{
+.editPlaylist {
   margin-left: 2px;
 }
-.playlistCards{
+.playlistCards {
   overflow-y: scroll;
   height: 200px;
+}
+.hrLinePlaylist {
+  border: 1px solid #61dafb;
 }

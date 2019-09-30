@@ -14,7 +14,7 @@ import PlaylistSongCard from "./PlaylistSongCard";
 // import EditPlaylistForm from "./EditPlaylistForm";
 import Spotify from "spotify-web-api-js";
 import SearchField from "../search/SearchField";
-import SongQueList from "../songQue/SongQueList";
+// import SongQueList from "../songQue/SongQueList";
 import DataManager from "../DataManager";
 
 const spotifyWebApi = new Spotify();
@@ -25,6 +25,7 @@ class PlaylistHome extends Component {
     super(props);
     this.state = {
       userId: sessionStorage.getItem("spotifyId"),
+      userName: sessionStorage.getItem("SpotifyName"),
       playlistName: "",
       currentPlaylistId: "",
       playlistId: "",
@@ -95,7 +96,8 @@ class PlaylistHome extends Component {
           spotifyId: this.state.currentPlaylistId,
           title: this.state.playlistName,
           description: this.state.playlistDesc,
-          userSpotifyId: this.state.userId
+          userSpotifyId: this.state.userId,
+          userName: this.state.userName
         };
         console.log(playlistObj);
         return playlistObj;

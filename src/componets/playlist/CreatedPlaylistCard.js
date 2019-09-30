@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import EditPlaylistForm from "./EditPlaylistForm";
+import "./Playlist.css";
 
 class CreatedPlaylistCard extends Component {
   state = {
@@ -14,7 +15,8 @@ class CreatedPlaylistCard extends Component {
       id: this.props.playlist.id,
       title: this.props.playlist.title,
       description: this.props.playlist.description,
-      userSpotifyId: this.props.playlist.userSpotifyId
+      userSpotifyId: this.props.playlist.userSpotifyId,
+      userName: this.props.playlist.userName
     };
     this.props.addCurrentPlaylistToStorage(PlaylistObj, playlistId);
   };
@@ -31,7 +33,7 @@ class CreatedPlaylistCard extends Component {
       <div className="createdPlaylistCard">
         <div className="singlePlaylist">
           <p>
-            {this.props.playlist.title} for {this.props.playlist.description}
+            {this.props.playlist.title} for {this.props.playlist.description} by {this.props.playlist.userName}
             <br />
             <Button
               size="sm"
@@ -59,7 +61,7 @@ class CreatedPlaylistCard extends Component {
               Follow
             </Button>
           </p>
-          <hr className="hrLine" />
+          <hr className="hrLinePlaylist" />
         </div>
         {/* toggles the input field to true so it shows*/}
         {this.state.showEditForm ? (

@@ -18,7 +18,7 @@ class SongQueCard extends Component {
         </td>
         <td>
           <Button size="sm" color="info">
-            x
+            X
           </Button>
         </td>
       </React.Fragment>

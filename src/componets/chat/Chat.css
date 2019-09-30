@@ -1,0 +1,43 @@
+.container-cards {
+  border: 2px solid goldenrod;
+  border-radius: 2%;
+  /* padding: 10px 10px 10px 10px; */
+  width: 700px;
+  /* margin-top: 5px; */
+  background-color: #282c34;
+  height: 500px;
+}
+.wrapper {
+  height: 350px;
+  overflow-y: scroll;
+}
+.header{
+  color: #61dafb;
+}
+
+.chats {
+  display: flex;
+  color: #61dafb;
+}
+.hrLine {
+  border: 1px solid #61dafb;
+  margin-top: -15px;
+}
+
+.chats:hover {
+  background: #007bff;
+}
+.chatBtns {
+  margin: auto;
+}
+.submitSection {
+  text-align: center;
+  margin: 5px;
+}
+#chatInput {
+  width: 40%;
+}
+#chatEdit,
+#chatDelete {
+  margin: 5px;
+}
