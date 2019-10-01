@@ -25,14 +25,6 @@
       "id": 5
     },
     {
-      "spotifyId": "4SWbZ6BZHBzbELSC1EXvLF",
-      "title": "Collab",
-      "description": "collabs test",
-      "userSpotifyId": "12177171325",
-      "userName": "12177171325",
-      "id": 7
-    },
-    {
       "spotifyId": "6TJMxW1TQxWMwrk8NDNqDv",
       "title": "Multi",
       "description": "colab test",
@@ -47,6 +39,14 @@
       "userSpotifyId": "12177171325",
       "userName": "12177171325",
       "id": 9
+    },
+    {
+      "spotifyId": "73ztJHcLjNDPzLWG1zwPXK",
+      "title": "Oj's",
+      "description": "night music",
+      "userSpotifyId": "12177171325",
+      "userName": "12177171325",
+      "id": 10
     }
   ],
   "songsAddedToPlaylist": [
@@ -99,18 +99,6 @@
       "id": 25
     },
     {
-      "songName": "Shadow Man (feat. Phoelix, Smino & Saba)",
-      "albumName": "Telefone",
-      "artistName": "Noname",
-      "song_uri": [
-        "spotify:track:1h2LHhmyAXi8tPNLi806JA"
-      ],
-      "song_id": "1h2LHhmyAXi8tPNLi806JA",
-      "spotifyPlaylistId": "4SWbZ6BZHBzbELSC1EXvLF",
-      "playlistId": 7,
-      "id": 62
-    },
-    {
       "songName": "Darlin'",
       "albumName": "Darlin'",
       "artistName": "tobi lou",
@@ -121,18 +109,6 @@
       "spotifyPlaylistId": "6TJMxW1TQxWMwrk8NDNqDv",
       "playlistId": 8,
       "id": 63
-    },
-    {
-      "songName": "There Goes My Baby",
-      "albumName": "Uncle Charlie",
-      "artistName": "Charlie Wilson",
-      "song_uri": [
-        "spotify:track:6rZsGpXDr0WsUSFitx3v8N"
-      ],
-      "song_id": "6rZsGpXDr0WsUSFitx3v8N",
-      "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
-      "playlistId": 9,
-      "id": 65
     },
     {
       "songName": "Outstanding - Original 12\" Mix",
@@ -157,6 +133,66 @@
       "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
       "playlistId": 9,
       "id": 69
+    },
+    {
+      "songName": "God's Plan",
+      "albumName": "Scorpion",
+      "artistName": "Drake",
+      "song_uri": [
+        "spotify:track:6DCZcSspjsKoFjzjrWoCdn"
+      ],
+      "song_id": "6DCZcSspjsKoFjzjrWoCdn",
+      "spotifyPlaylistId": "6TJMxW1TQxWMwrk8NDNqDv",
+      "playlistId": 8,
+      "id": 70
+    },
+    {
+      "songName": "Amphetamine",
+      "albumName": "blkswn",
+      "artistName": "Smino",
+      "song_uri": [
+        "spotify:track:3Zau3JcrZcBfw8aVjKGkSX"
+      ],
+      "song_id": "3Zau3JcrZcBfw8aVjKGkSX",
+      "spotifyPlaylistId": "6TJMxW1TQxWMwrk8NDNqDv",
+      "playlistId": 8,
+      "id": 71
+    },
+    {
+      "songName": "Old Town Road - Remix",
+      "albumName": "7 EP",
+      "artistName": "Lil Nas X",
+      "song_uri": [
+        "spotify:track:2YpeDb67231RjR0MgVLzsG"
+      ],
+      "song_id": "2YpeDb67231RjR0MgVLzsG",
+      "spotifyPlaylistId": "73ztJHcLjNDPzLWG1zwPXK",
+      "playlistId": 10,
+      "id": 72
+    },
+    {
+      "songName": "Level Up",
+      "albumName": "Level Up",
+      "artistName": "Ciara",
+      "song_uri": [
+        "spotify:track:5ubwXXOsH9bUhZsQ0Cybha"
+      ],
+      "song_id": "5ubwXXOsH9bUhZsQ0Cybha",
+      "spotifyPlaylistId": "73ztJHcLjNDPzLWG1zwPXK",
+      "playlistId": 10,
+      "id": 73
+    },
+    {
+      "songName": "In My Feelings",
+      "albumName": "Scorpion",
+      "artistName": "Drake",
+      "song_uri": [
+        "spotify:track:2G7V7zsVDxg1yRsu7Ew9RJ"
+      ],
+      "song_id": "2G7V7zsVDxg1yRsu7Ew9RJ",
+      "spotifyPlaylistId": "73ztJHcLjNDPzLWG1zwPXK",
+      "playlistId": 10,
+      "id": 74
     }
   ],
   "chat": [
