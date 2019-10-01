@@ -47,6 +47,14 @@
       "userSpotifyId": "12177171325",
       "userName": "12177171325",
       "id": 10
+    },
+    {
+      "spotifyId": "5Paevk3NI8mKrqidL2CEPF",
+      "title": "Drake",
+      "description": "Demo",
+      "userSpotifyId": "jtowxgcgpdzemj095qfh344so",
+      "userName": "tink",
+      "id": 11
     }
   ],
   "songsAddedToPlaylist": [
@@ -183,16 +191,16 @@
       "id": 74
     },
     {
-      "songName": "Burn Rubber On Me (Why You Wanna Hurt Me)",
-      "albumName": "Greatest Hits",
-      "artistName": "The Gap Band",
+      "songName": "9",
+      "albumName": "Views",
+      "artistName": "Drake",
       "song_uri": [
-        "spotify:track:32YzjV133gteg9LMBGO2OA"
+        "spotify:track:1C7KSXR2GVxknex6I4ANco"
       ],
-      "song_id": "32YzjV133gteg9LMBGO2OA",
-      "spotifyPlaylistId": "1sTaS9pT4oVLWs2KecjmQH",
-      "playlistId": 9,
-      "id": 75
+      "song_id": "1C7KSXR2GVxknex6I4ANco",
+      "spotifyPlaylistId": "5Paevk3NI8mKrqidL2CEPF",
+      "playlistId": 11,
+      "id": 76
     }
   ],
   "chat": [
@@ -220,6 +228,11 @@
       "userName": "12177171325",
       "message": "I made a Charlie Wilson playlist for you to checkout",
       "id": 6
+    },
+    {
+      "userName": "tink",
+      "message": "Hey 12177.. I made a Drake playlist for you to checkout",
+      "id": 7
     }
   ]
 }
